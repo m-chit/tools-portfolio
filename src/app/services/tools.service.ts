@@ -7,37 +7,37 @@ export class ToolsService {
     {
       name: 'tool1',
       details: 'tool tool tool 1',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     },
     {
       name: 'tool2',
       details: 'tool tool tool 2',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     },
     {
       name: 'tool3',
       details: 'tool tool tool 3',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     },
     {
       name: 'tool4',
       details: 'tool tool tool 4',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     },
     {
       name: 'tool5',
       details: 'tool tool tool 5',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     },
     {
       name: 'tool6',
       details: 'tool tool tool 6',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     },
     {
       name: 'tool7',
       details: 'tool tool tool 7',
-      image: ''
+      image: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
     }
   ];
 

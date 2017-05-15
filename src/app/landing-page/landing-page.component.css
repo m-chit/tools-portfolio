@@ -1,0 +1,19 @@
+#log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logInput {
+  margin-bottom: 20px;
+  width: 35%;
+}
+
+.background {
+  background: url(https://static.pexels.com/photos/23049/pexels-photo.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

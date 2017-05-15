@@ -1,1 +1,19 @@
-<app-navbar></app-navbar>
+<form
+  class="background"
+  id="log"
+  [ngStyle]="{height: getPx()}"
+  (ngSubmit)="onSubmit()"
+  #f="ngForm">
+  <input
+    name="username"
+    ngModel
+    type="username"
+    class="from-control logInput">
+  <input
+    name="password"
+    ngModel
+    type="password"
+    class="from-control logInput">
+  <button type="submit" class="btn btn-primary">Log</button>
+</form>
+
