@@ -1,9 +1,41 @@
-#tool {
+.toolBorder {
+  text-align: justify;
   border: solid 1px #ddd;
-  padding: 20px;
-  margin-top: 15px;
+  background-color: #fff;
+  color: #333;
+  width: 340px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+#title {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#details {
+  min-height: 150px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #image {
-  height: 190px;
+  height: 75px;
+  width: 75px;
+}
+
+.imgButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
 }

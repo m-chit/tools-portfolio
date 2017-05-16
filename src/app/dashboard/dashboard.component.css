@@ -1,8 +1,14 @@
 #dashboard {
-  padding-top: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
 }
 
+.category {
+  background-color: #fdfdfd;
+}
+
+.categoryTitle {
+  margin-left: 10px;
+}

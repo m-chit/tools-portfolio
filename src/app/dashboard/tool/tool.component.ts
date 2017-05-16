@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ToolModel } from '../../models/tool.model';
+import {ToolModel} from '../../models/tool.model';
 
 @Component({
   selector: 'app-tool',
@@ -8,9 +8,10 @@ import { ToolModel } from '../../models/tool.model';
 })
 export class ToolComponent implements OnInit {
   @Input('Tool') tool: ToolModel;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }

@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+  height = window.innerHeight;
 
   constructor(private router: Router) {
   }
@@ -14,8 +15,12 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  onResize(event) {
+    this.height = event.target.innerHeight;
+  }
+
   getPx() {
-    return window.innerHeight + 'px';
+    return `${this.height}px`;
   }
 
   onSubmit() {

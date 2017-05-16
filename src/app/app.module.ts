@@ -9,8 +9,9 @@ import {LandingPageComponent} from './landing-page/landing-page.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {NotFoundComponent} from './not-found/not-found.component';
-import { ToolComponent } from './dashboard/tool/tool.component';
+import {ToolComponent} from './dashboard/tool/tool.component';
 import {ToolsService} from "./services/tools.service";
+import {CutPipe} from './pipes/cut.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {ToolsService} from "./services/tools.service";
     NavbarComponent,
     DashboardComponent,
     NotFoundComponent,
-    ToolComponent
+    ToolComponent,
+    CutPipe
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import {ToolsService} from "./services/tools.service";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ ToolsService ],
+  providers: [ToolsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

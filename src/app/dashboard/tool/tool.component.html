@@ -1,7 +1,19 @@
-<div id="tool">
-  <h1> {{ tool.name }} </h1>
-  <img id="image" [src]="tool.image" alt="Card image cap">
-  <h2> {{ tool.details }} </h2>
-
+<div class="toolBorder">
+  <div class="flex" id="title">
+    <div style="flex-basis: 93%;">
+      <h4> {{ tool.name | cut:21 }} </h4>
+    </div>
+    <div style="flex-basis: 7%;">
+      <button class="btn btn-outline-secondary btn-sm">x</button>
+    </div>
+  </div>
+  <div class="flex" id="details">
+    <div style="flex-basis: 30%;" class="imgButton">
+      <img class="rounded-circle" id="image" [src]="tool.image" alt="Card image cap">
+      <button class="btn btn-secondary btn-sm" type="button">Details</button>
+    </div>
+    <div style="flex-basis: 70%">
+      <h6> {{ tool.details | cut:180 }} </h6>
+    </div>
+  </div>
 </div>
-

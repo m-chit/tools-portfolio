@@ -9,7 +9,9 @@ import {ToolModel} from '../models/tool.model';
 })
 export class DashboardComponent implements OnInit {
   toolsList: ToolModel[] = [];
-  constructor(private toolsService: ToolsService) { }
+
+  constructor(private toolsService: ToolsService) {
+  }
 
   ngOnInit() {
     this.toolsList = this.toolsService.toolsList;
