@@ -6,11 +6,16 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  activeHome = true;
+  activeFavorite = false;
   constructor() {
   }
 
   ngOnInit() {
   }
 
+  isActive() {
+    this.activeHome = !this.activeHome;
+    this.activeFavorite = !this.activeFavorite;
+  }
 }

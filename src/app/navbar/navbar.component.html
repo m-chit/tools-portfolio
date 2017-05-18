@@ -1,10 +1,8 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link " [routerLink]="['/landing-page']"> Log out <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
+<nav id="navbarNav" class="navbar navbar-toggleable-md bg-faded">
+  <div class="collapse navbar-collapse">
+    <a (click)="isActive()" [ngClass]="{active: activeHome}" class="nav-link link"  [routerLink]="['/dashboard']">Home</a>
+    <a (click)="isActive()" [ngClass]="{active: activeFavorite}" class="nav-link link" [routerLink]="['/dashboard']">Favorite</a>
+    <a class="nav-link link" [routerLink]="['/landing-page']">Log out</a>
   </div>
 </nav>
 

@@ -1,8 +1,6 @@
 .background {
-  animation: backgroundAnimation 100s infinite;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  animation: backgroundAnimation 48s steps(1, end) infinite;
+  background: url(../../assets/img/bg-c.png) no-repeat center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -13,12 +11,14 @@
 #titleLog {
   color: white;
   font-size: 4em;
-  font-family: Impact;
+  font-family: "Impact";
+  text-shadow: 0 0 .4rem #000;
   padding-bottom: 20px;
 }
 
 .panel {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.55);
+  box-shadow: 0rem 0rem 2rem #000;
   border: solid 1px #000000;
   width: 40%;
   padding: 78px 20px 20px 20px;
@@ -34,27 +34,38 @@
 .logInput {
   margin-bottom: 20px;
   width: 90%;
+  border: solid 1px #000;
+  padding: 6px;
 }
 
 @keyframes backgroundAnimation {
-  0% {
-    background: url(https://static.pexels.com/photos/23049/pexels-photo.jpg) no-repeat center fixed;
+  0%, 100% {
+    background:
+      url(../../assets/img/bg-c.png) no-repeat center fixed;
     background-size: cover;
   }
-  20% {
-    background: url(https://www.walldevil.com/wallpapers/a89/wallpaper-forest-static-tumblr-lbnn95lfb.jpg) no-repeat center fixed;
+  25% {
+    background:
+      url(../../assets/img/bg-g.png) no-repeat center fixed;
     background-size: cover;
   }
-  40% {
-    background: url(http://7bna.net/images/mountain-wallpaper/mountain-wallpaper-34.jpg) no-repeat center fixed;
+  50% {
+    background:
+      url(../../assets/img/bg-j.png) no-repeat center fixed;
     background-size: cover;
   }
-  60% {
-    background: url(https://tagulfsilva.files.wordpress.com/2013/06/wide-wallpaper-1920x1200-0431.jpg) no-repeat center fixed;
+ 75% {
+    background:
+      url(../../assets/img/bg-k.png) no-repeat center fixed;
     background-size: cover;
   }
-  100% {
-    background: url(http://www.proinox.rs/files/images/1446547286-elevator-world-architecture-buildings-structures-chrome-metal-steel-window-glass-interior-design-wallpaper.jpg) no-repeat center fixed;
-    background-size: cover;
+}
+
+@media (max-width: 55rem) {
+  .panel {
+    width: 100%;
+  }
+  #titleLog {
+    font-size: 2.5em;
   }
 }

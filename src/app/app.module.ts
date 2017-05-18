@@ -10,7 +10,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {ToolComponent} from './dashboard/tool/tool.component';
-import {ToolsService} from "./services/tools.service";
+import {ToolsService} from './services/tools.service';
 import {CutPipe} from './pipes/cut.pipe';
 
 

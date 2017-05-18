@@ -1,0 +1,27 @@
+#navbarNav {
+  background-color: #004b99;
+  padding: 0px;
+}
+
+.link {
+  color: #eef2f3;
+  margin-left: 20px;
+  padding: 15px;
+  font-family: "Arial Black";
+}
+
+.link:last-child {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.link:hover {
+  background-color: #fff;
+  color: #006fe2;
+  box-shadow: inset 0 -5px 0 #006fe2;
+}
+
+.active, .active:hover {
+  background-color: #00366e;
+  color: #fff;
+}
