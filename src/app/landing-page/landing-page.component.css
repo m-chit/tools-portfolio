@@ -1,5 +1,5 @@
 .background {
-  animation: backgroundAnimation 48s steps(1, end) infinite;
+  animation: backgroundAnimation 32s steps(1, end) infinite;
   background: url(../../assets/img/bg-c.png) no-repeat center fixed;
   background-size: cover;
   display: flex;
@@ -40,23 +40,19 @@
 
 @keyframes backgroundAnimation {
   0%, 100% {
-    background:
-      url(../../assets/img/bg-c.png) no-repeat center fixed;
+    background: url(../../assets/img/bg-g.png) no-repeat center fixed;
     background-size: cover;
   }
   25% {
-    background:
-      url(../../assets/img/bg-g.png) no-repeat center fixed;
+    background: url(../../assets/img/bg-c.png) no-repeat center fixed;
     background-size: cover;
   }
   50% {
-    background:
-      url(../../assets/img/bg-j.png) no-repeat center fixed;
+    background: url(../../assets/img/bg-j.png) no-repeat center fixed;
     background-size: cover;
   }
  75% {
-    background:
-      url(../../assets/img/bg-k.png) no-repeat center fixed;
+    background: url(../../assets/img/bg-k.png) no-repeat center fixed;
     background-size: cover;
   }
 }

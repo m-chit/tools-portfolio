@@ -9,34 +9,45 @@ export class ToolsService {
       details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore ' +
       'et dolore magna aliqua. Ut enim ad minimtation ullamco laboris nisi aliquip ex ' +
       'ea commodo consequat.',
-      image: 'https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png'
+      image: '../../assets/logo/logo-2.png',
+      favorite: false,
+      category: 'c1'
     },
     {
       name: 'Lorem ipsum',
       details: 'Lorem ipsum dolor sit amet, tempor incididunt ut labore.',
-      image: 'http://blog.ninja-squad.com/assets/images/ng2-ebook/ng2-logo.png'
+      image: '../../assets/logo/logo-4.png',
+      favorite: false,
+      category: 'c2'
     },
     {
       name: 'Lorem ipsum dolor',
       details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, incididunt ut labore.',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/2000px-JSON_vector_logo.svg.png'
+      image: '../../assets/logo/logo-6.png',
+      favorite: false,
+      category: 'c1'
     },
     {
       name: 'Consectetur elit',
       details: 'Consectetur consectetur adipiscing elit adipiscing elit, sed do eiusmod tempor incididunt ' +
       'ut labore, ad sed do eiusmod minimtation ullamco.',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2000px-' +
-      'Unofficial_JavaScript_logo_2.svg.png'
+      image: '../../assets/logo/logo-8.png',
+      favorite: false,
+      category: 'c1'
     },
     {
       name: 'Duis voluptate',
       details: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-      image: 'https://cdn.auth0.com/blog/jwtalgos/logo.png'
+      image: '../../assets/logo/logo-10.png',
+      favorite: false,
+      category: 'c2'
     },
     {
-      name: 'Duis eu',
+      name: 'Duis eu con adipsc elit si in adipiscing elit',
       details: 'Duis dolore nulla.',
-      image: 'https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg'
+      image: '../../assets/logo/logo-1.png',
+      favorite: false,
+      category: 'c1'
     },
     {
       name: 'Excepteur sint occaecat cupidatat',
@@ -44,10 +55,44 @@ export class ToolsService {
       'laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur ' +
       'adipiscing elit, sed do eiusmod tempor incididunt ut labore. Duis aute irure dolor in reprehenderit. ' +
       'Excepteur sint occaecat cupidatat non proident.',
-      image: 'https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png'
+      image: '../../assets/logo/logo-3.png',
+      favorite: false,
+      category: 'c2'
+    },
+    {
+      name: 'Duiduptate',
+      details: 'Duis dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      image: '../../assets/logo/logo-5.png',
+      favorite: false,
+      category: 'c1'
+    },
+    {
+      name: 'Irure dolor in reprehenderit irure dolor in repreh',
+      details: 'Duis aute irure dolor in ruis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ' +
+      'eu fugiat nulla pariatur.',
+      image: '../../assets/logo/logo-7.png',
+      favorite: false,
+      category: 'c2'
+    },
+    {
+      name: 'Excepnt occaecat cupidatat',
+      details: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ' +
+      'laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur ' +
+      'adipiscing elit, sed do eiusmod tempor incididunt ut labore. Duis aute irure dolor in reprehenderit. ' +
+      'Excepteur sint occaecat cupidatat non proident.',
+      image: '../../assets/logo/logo-9.png',
+      favorite: false,
+      category: 'c1'
+    },
+    {
+      name: 'Axcedatat',
+      details: 'Pccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ' +
+      'laborum. Duis aute it in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur ' +
+      'adipiscing elitor incididunt ut labore. Duis aute irure dolor in reprehenderit. ' +
+      'Excepteur sint occaecat cupidatat non proident.',
+      image: '../../assets/logo/logo-11.png',
+      favorite: false,
+      category: 'c2'
     }
   ];
-
-  constructor() {
-  }
 }

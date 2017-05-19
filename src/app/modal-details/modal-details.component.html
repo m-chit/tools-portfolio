@@ -1,0 +1,29 @@
+<div class="modalSize"
+     *ngIf="hidden === false">
+  <div class="modalBackground">
+    <img class="imgDetails" [src]="tool.image">
+    <h3> {{ tool.name }} </h3>
+    <p>{{ tool.details }}</p>
+    <div class="buttonFlex">
+      <button
+        (click)="tool.favorite = !tool.favorite"
+        [ngClass]="{buttonActive: tool.favorite}"
+        class="buttonHeart">
+        ♥</button>
+    <button
+      (click)="hiddenModal()"
+      class="btn buttonDetails"
+    >Close
+    </button>
+
+    </div>
+  </div>
+
+</div>
+
+
+<button
+  class="btn buttonDetails"
+  (click)="showModal()">Details
+</button>
+

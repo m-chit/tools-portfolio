@@ -1,12 +1,22 @@
 <app-navbar></app-navbar>
 
-<div class="container-fluid">
-  <div class="row" class="category">
-    <h1 class="categoryTitle">Category 1</h1>
-    <div id="dashboard">
-      <div *ngFor="let tool of toolsList">
-        <app-tool [Tool]="tool"></app-tool>
-      </div>
+<div class="row">
+  <div class="category">
+  <h1 class="categoryTitle">Category 1</h1>
+  <div class="dashboard">
+    <div *ngFor="let tool of toolsListC1">
+      <app-tool [Tool]="tool"></app-tool>
     </div>
   </div>
+</div>
+</div>
+<div class="row">
+  <div class="category">
+  <h1 class="categoryTitle">Category 2</h1>
+  <div class="dashboard">
+    <div *ngFor="let tool of toolsListC2">
+      <app-tool [Tool]="tool"></app-tool>
+    </div>
+  </div>
+</div>
 </div>

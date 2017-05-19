@@ -5,9 +5,12 @@
 
 .link {
   color: #eef2f3;
-  margin-left: 20px;
   padding: 15px;
   font-family: "Arial Black";
+}
+
+.link:first-child {
+  margin-left: 20px;
 }
 
 .link:last-child {
@@ -16,9 +19,8 @@
 }
 
 .link:hover {
-  background-color: #fff;
-  color: #006fe2;
-  box-shadow: inset 0 -5px 0 #006fe2;
+  background-color: #006ad9;
+  color: #eef2f3;
 }
 
 .active, .active:hover {

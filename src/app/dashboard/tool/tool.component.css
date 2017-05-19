@@ -1,9 +1,8 @@
 .toolBorder {
-  text-align: justify;
-  border: solid 1px #ddd;
+  border: solid 1px #d7dadb;
   background-color: #fff;
   color: #333;
-  width: 340px;
+  width: 270px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
@@ -12,30 +11,62 @@
 .flex {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+#top {
+  background-color: #e5e7e7;
+  border-bottom: solid 1px #d7dadb;
 }
 
 #title {
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  flex-basis: 75%;
+  color: #505151;
+  font-weight: 400;
 }
 
-#details {
-  min-height: 150px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+#logo {
+  flex-basis: 25%;
 }
 
 #image {
-  height: 75px;
-  width: 75px;
+  height: 65px;
+  width: 65px;
 }
 
-.imgButton {
+#details {
+  text-align: justify;
+  height: 110px;
+  padding: 10px;
+}
+
+#buttons {
+  background-color: #e5e7e7;
   display: flex;
-  flex-direction: column;
+  border-top: solid 1px #d7dadb;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  padding: 5px 10px 5px 10px;
+}
+
+#heart {
+  height: 30px;
+  width: 30px;
+}
+
+.buttonHeart {
+  border-radius: 50%;
+  background-color: #d7dadb;
+  box-shadow: inset 0 0 10px #bfc1c1;
+  color: #fff;
+  font-size: 1.6rem;
+  border: none;
+}
+
+.buttonHeart:hover {
+  text-shadow: 0 0 10px #006ad9;
+}
+
+.buttonActive {
+  color: #0057b1;
 }

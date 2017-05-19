@@ -1,9 +1,7 @@
 <nav id="navbarNav" class="navbar navbar-toggleable-md bg-faded">
   <div class="collapse navbar-collapse">
-    <a (click)="isActive()" [ngClass]="{active: activeHome}" class="nav-link link"  [routerLink]="['/dashboard']">Home</a>
-    <a (click)="isActive()" [ngClass]="{active: activeFavorite}" class="nav-link link" [routerLink]="['/dashboard']">Favorite</a>
+    <a class="nav-link link active"  [routerLink]="['/dashboard']">Home</a>
+    <a class="nav-link link" [routerLink]="['/favorite']">Favorite</a>
     <a class="nav-link link" [routerLink]="['/landing-page']">Log out</a>
   </div>
 </nav>
-
-

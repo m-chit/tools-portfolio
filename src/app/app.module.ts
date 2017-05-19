@@ -12,6 +12,9 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {ToolComponent} from './dashboard/tool/tool.component';
 import {ToolsService} from './services/tools.service';
 import {CutPipe} from './pipes/cut.pipe';
+import {ModalModule} from 'ngx-bootstrap';
+import {FavoriteComponent} from './favorite/favorite.component';
+import { ModalDetailsComponent } from './modal-details/modal-details.component';
 
 
 @NgModule({
@@ -22,13 +25,16 @@ import {CutPipe} from './pipes/cut.pipe';
     DashboardComponent,
     NotFoundComponent,
     ToolComponent,
-    CutPipe
+    CutPipe,
+    FavoriteComponent,
+    ModalDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   providers: [ToolsService],
   bootstrap: [AppComponent]
