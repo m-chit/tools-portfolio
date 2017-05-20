@@ -6,4 +6,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  dropdownShow = false;
+  DropdownShow() {
+    return this.dropdownShow = !this.dropdownShow;
+  }
 }

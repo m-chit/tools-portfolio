@@ -26,6 +26,7 @@
   flex-direction: column;
   justify-content: flex-end;
 }
+
 .tool-image {
   margin-top: 20px;
   width: 85px;
@@ -46,10 +47,10 @@
   font-size: .8rem;
 }
 
-
 .tags {
   display: flex;
 }
+
 .tool-details-font {
   margin-top: 20px;
   padding-top: 20px;
@@ -58,6 +59,7 @@
   color: #585858;
   font-size: .9rem;
 }
+
 .heart-button {
   background-color: transparent;
   border: none;
@@ -65,9 +67,9 @@
 }
 
 .heart-empty {
-color: #4b4b4b;
+  color: #529a2f;
 }
 
 .heart-filled {
-color: #529a2f;
+  color: #529a2f;
 }

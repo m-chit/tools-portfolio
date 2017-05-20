@@ -1,4 +1,6 @@
-#navbar-nav {
+.navbar-nav {
+  position: fixed;
+  width: 100vw;
   background-color: #529a2f;
   padding: 0;
 }
@@ -17,9 +19,29 @@
 
 .link:last-child {
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
+.my-dropdown {
+  background-color: transparent;
+  border: none;
+  color: #eef3ef;
+  font-family: Consolas, monaco, monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-item {
+  color: #4b4b4b;
+}
+.dropdown-item:hover {
+  color: #497c25;
+  background-color: #d6e7b8;
+}
 .link:hover {
   background-color: #91c33c;
   color: #eef3ef;
