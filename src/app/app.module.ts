@@ -13,7 +13,6 @@ import {ToolComponent} from './dashboard/tool/tool.component';
 import {ToolsService} from './services/tools.service';
 import {ModalDetailsComponent} from './modal-details/modal-details.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
-import { FiltersComponent } from './dashboard/filters/filters.component';
 
 
 @NgModule({
@@ -25,8 +24,7 @@ import { FiltersComponent } from './dashboard/filters/filters.component';
     NotFoundComponent,
     ToolComponent,
     ModalDetailsComponent,
-    CheckboxComponent,
-    FiltersComponent
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,
