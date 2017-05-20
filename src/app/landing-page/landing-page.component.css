@@ -1,18 +1,20 @@
 .background {
-  animation: backgroundAnimation 32s steps(1, end) infinite;
-  background: url(../../assets/img/bg-c.png) no-repeat center fixed;
+  animation: background-animation 32s steps(1, end) infinite;
+  background: #ffffff url(../../assets/img/bg-c.png) no-repeat bottom center fixed;
   background-size: cover;
   display: flex;
+  height: 100vh;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#titleLog {
+.title-log {
   color: white;
-  font-size: 4em;
-  font-family: "Impact";
-  text-shadow: 0 0 .4rem #000;
+  font-size: 6em;
+  font-family: "Dancing Script";
+  text-shadow: 0 0 .4rem #000, 0 0 4rem #000;
   padding-bottom: 20px;
 }
 
@@ -24,44 +26,97 @@
   padding: 78px 20px 20px 20px;
 }
 
-#log {
+.form-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.logInput {
+.btn-group {
+  width: 100%;
+}
+
+.log-input {
+  background-color: rgba(255, 255, 255, 1);
+  margin-right: 20px;
+  width: 100%;
+  border: none;
+  height: 36px;
+  padding: 0 0 0 10px;
+}
+
+.log-input-first {
   margin-bottom: 20px;
-  width: 90%;
-  border: solid 1px #000;
-  padding: 6px;
 }
 
-@keyframes backgroundAnimation {
+.icon-left {
+  display: flex;
+  background-color: #529a2f;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  border: none;
+  margin-left: 20px;
+  padding: 6px;
+  width: 38px;
+}
+
+.log-in-button {
+  display: block;
+}
+
+.-checkbox {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  color: white;
+  font-size: 0.8em;
+}
+
+.log-button {
+  color: white;
+  text-shadow: 0 0 3px #529a2f;
+  font-weight: 700;
+  font-family: Consolas,monaco,monospace;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  border: solid 1px #4a8a2a;
+  background-image: linear-gradient(#529a2f, #91c33c);
+}
+
+.log-button:hover {
+  background-image: linear-gradient(#529a2f, #529a2f);
+}
+
+@keyframes background-animation {
   0%, 100% {
-    background: url(../../assets/img/bg-g.png) no-repeat center fixed;
+    background: url(../../assets/img/bg-c.png) no-repeat bottom center fixed;
     background-size: cover;
   }
   25% {
-    background: url(../../assets/img/bg-c.png) no-repeat center fixed;
+
+    background: url(../../assets/img/bg-k.png) no-repeat bottom center fixed;
     background-size: cover;
   }
   50% {
-    background: url(../../assets/img/bg-j.png) no-repeat center fixed;
+    background: url(../../assets/img/bg-g.png) no-repeat bottom center fixed;
     background-size: cover;
   }
- 75% {
-    background: url(../../assets/img/bg-k.png) no-repeat center fixed;
+  75% {
+    background: url(../../assets/img/bg-j.png) no-repeat bottom center fixed;
     background-size: cover;
   }
 }
 
-@media (max-width: 55rem) {
+@media (max-width: 60rem) {
   .panel {
     width: 100%;
   }
-  #titleLog {
-    font-size: 2.5em;
+
+  .title-log {
+    font-size: 4em;
   }
 }

@@ -1,13 +1,13 @@
 .modalSize {
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00000080;
-  height: 100%;
-  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 .modalBackground {
@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .modalBackground {
     width: 80%;
   }
@@ -42,18 +42,21 @@
 }
 
 .buttonDetails {
-  background-color: #ffffff;
-  color: #505151;
-  border: solid 1px #d7dadb;
+  margin-bottom: 10px;
+
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
 }
 
 .buttonDetails:hover {
-  background-color: #004b99;
   color: #fff;
-  border: solid 1px #00366e;
+  text-decoration: underline;
 }
 
 .buttonHeart {
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background-color: #d7dadb;
   box-shadow: inset 0 0 10px #bfc1c1;

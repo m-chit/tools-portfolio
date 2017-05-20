@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ToolModel} from '../../models/tool.model';
 
 @Component({
@@ -6,12 +6,6 @@ import {ToolModel} from '../../models/tool.model';
   templateUrl: './tool.component.html',
   styleUrls: ['./tool.component.css']
 })
-export class ToolComponent implements OnInit {
+export class ToolComponent {
   @Input('Tool') tool: ToolModel;
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
 }

@@ -1,72 +1,55 @@
-.toolBorder {
-  border: solid 1px #d7dadb;
-  background-color: #fff;
-  color: #333;
-  width: 270px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
-
-.flex {
+.tool-shell {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 405px;
+  width: 365px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: solid .1rem #f4f4f4;
+  box-shadow: 4px 4px 6px rgba(130, 130, 130, .1);
 }
 
-#top {
-  background-color: #e5e7e7;
-  border-bottom: solid 1px #d7dadb;
-}
-
-#title {
-  flex-basis: 75%;
-  color: #505151;
-  font-weight: 400;
-}
-
-#logo {
-  flex-basis: 25%;
-}
-
-#image {
-  height: 65px;
-  width: 65px;
-}
-
-#details {
-  text-align: justify;
-  height: 110px;
+.tool {
   padding: 10px;
-}
-
-#buttons {
-  background-color: #e5e7e7;
   display: flex;
-  border-top: solid 1px #d7dadb;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
-  padding: 5px 10px 5px 10px;
+  background-color: #ffffff;
+  color: #333;
 }
 
-#heart {
-  height: 30px;
-  width: 30px;
-}
-
-.buttonHeart {
+.tool-image {
+  width: 20%;
   border-radius: 50%;
-  background-color: #d7dadb;
-  box-shadow: inset 0 0 10px #bfc1c1;
-  color: #fff;
-  font-size: 1.6rem;
+}
+
+.tool-title-font {
+  color: #333333;
+  font-size: 1.2rem;
+}
+
+.tool-details-font {
+  color: #333333;
+  font-size: .9rem;
+}
+
+.button-heart {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #c80034;
+  font-size: 1.5rem;
   border: none;
 }
 
-.buttonHeart:hover {
-  text-shadow: 0 0 10px #006ad9;
-}
-
-.buttonActive {
-  color: #0057b1;
+.button-heart:hover {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #c80034;
+  font-size: 1.5rem;
+  border: none;
 }

@@ -9,6 +9,7 @@ import {ToolModel} from '../models/tool.model';
 export class ModalDetailsComponent {
   @Input('Tool') tool: ToolModel;
   hidden = true;
+
   showModal() {
     this.hidden = false;
     console.log('show');
@@ -16,7 +17,7 @@ export class ModalDetailsComponent {
 
   hiddenModal() {
     this.hidden = true;
-   console.log('destroy');
+    console.log('destroy');
   }
 
 

@@ -9,12 +9,13 @@
         (click)="tool.favorite = !tool.favorite"
         [ngClass]="{buttonActive: tool.favorite}"
         class="buttonHeart">
-        ♥</button>
-    <button
-      (click)="hiddenModal()"
-      class="btn buttonDetails"
-    >Close
-    </button>
+        ♥
+      </button>
+      <button
+        (click)="hiddenModal()"
+        class="btn btn-outline-primary"
+      >Close
+      </button>
 
     </div>
   </div>
@@ -23,7 +24,7 @@
 
 
 <button
-  class="btn buttonDetails"
+  class="btn btn-outline-danger"
   (click)="showModal()">Details
 </button>
 

@@ -1,12 +1,14 @@
-#navbarNav {
-  background-color: #004b99;
-  padding: 0px;
+#navbar-nav {
+  background-color: #529a2f;
+  padding: 0;
 }
 
 .link {
-  color: #eef2f3;
-  padding: 15px;
-  font-family: "Arial Black";
+  color: #eef3ef;
+  padding: 10px 30px 10px 30px;
+  font-family: Consolas,monaco,monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .link:first-child {
@@ -19,11 +21,11 @@
 }
 
 .link:hover {
-  background-color: #006ad9;
-  color: #eef2f3;
+  background-color: #91c33c;
+  color: #eef3ef;
 }
 
 .active, .active:hover {
-  background-color: #00366e;
+  background-color: #497c25;
   color: #fff;
 }

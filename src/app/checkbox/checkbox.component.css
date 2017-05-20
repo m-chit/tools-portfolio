@@ -1,0 +1,19 @@
+.checkbox, .active, .no-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  margin-right: 8px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: solid 1px #000;
+}
+
+.active {
+  color: #ffffff;
+  background-color: #529a2f;
+  border: solid 1px #468328;
+}
+
+

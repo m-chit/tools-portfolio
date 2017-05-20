@@ -1,22 +1,17 @@
 <app-navbar></app-navbar>
 
-<div class="row">
-  <div class="category">
-  <h1 class="categoryTitle">Category 1</h1>
-  <div class="dashboard">
-    <div *ngFor="let tool of toolsListC1">
+<div class="dashboard">
+  <div class="filter">
+    <span class="filter-title">FILTERS</span>
+
+    <div *ngFor="let tool of toolsListCategory" class="filter-category">
+      <app-checkbox></app-checkbox> {{tool}}
+    </div>
+  </div>
+
+  <div class="tools">
+    <div *ngFor="let tool of toolsList">
       <app-tool [Tool]="tool"></app-tool>
     </div>
   </div>
-</div>
-</div>
-<div class="row">
-  <div class="category">
-  <h1 class="categoryTitle">Category 2</h1>
-  <div class="dashboard">
-    <div *ngFor="let tool of toolsListC2">
-      <app-tool [Tool]="tool"></app-tool>
-    </div>
-  </div>
-</div>
 </div>

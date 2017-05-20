@@ -8,17 +8,21 @@ import {ToolModel} from '../models/tool.model';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  toolsList: ToolModel[];
-  toolsListC1: ToolModel[] = [];
-  toolsListC2: ToolModel[] = [];
+  toolsList: ToolModel[] = [];
+  toolsListCategory: ToolModel[] = [];
+  toolsListTag: ToolModel[] = [];
 
   constructor(private toolsService: ToolsService) {
   }
 
   ngOnInit() {
+    this.toolsListCategory = this.toolsService.toolsList.reduce((acc, value) => {
+      if (acc.find(category => category === value.category) === undefined) {
+        acc = [...acc, value.category];
+      }
+      return acc;
+    }, []);
     this.toolsList = this.toolsService.toolsList;
-    this.toolsListC1 = this.toolsList.filter((current) => current.category === 'c1');
-    this.toolsListC2 = this.toolsList.filter((current) => current.category === 'c2');
   }
 
 }

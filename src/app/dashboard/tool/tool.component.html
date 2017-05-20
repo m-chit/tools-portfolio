@@ -1,23 +1,21 @@
-<div class="toolBorder">
-  <div id="top" class="flex">
-    <div id="logo">
-      <img id="image" [src]="tool.image" alt=" ">
-    </div>
-    <div id="title">
-      <h4> {{ tool.name | cut:30 }} </h4>
-    </div>
-  </div>
-  <div class="flex">
-    <div id="details">
-      <p> {{ tool.details | cut:125 }} </p>
-    </div>
-  </div>
-  <div id="buttons">
-    <button (click)="tool.favorite = !tool.favorite" [ngClass]="{buttonActive: tool.favorite}" class="buttonHeart">
-      ♥</button>
-    <app-modal-details [Tool]="tool" ></app-modal-details>
+<div class="tool-shell">
+  <div class="tool">
+
+    <img class="tool-image" [src]="tool.image" alt=" ">
+
+    <span class="tool-title-font"> {{tool.name}} </span>
+    <span>x, y, d, gg</span>
+    <hr>
+    <span class="tool-details-font"> {{tool.details}} </span>
+
+    <button
+      (click)="tool.favorite = !tool.favorite"
+      [ngClass]="{buttonActive: tool.favorite}"
+      class="button-heart">
+      ♥
+    </button>
+
+    <app-modal-details [Tool]="tool"></app-modal-details>
+
   </div>
 </div>
-
-
-

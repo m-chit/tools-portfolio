@@ -1,23 +1,46 @@
-<div class="background" [ngStyle]="{height: getPx()}" (window:resize)="onResize($event)">
-  <h1 id="titleLog"> Tools Portfolio</h1>
+
+<div class="background">
+  <h1 class="title-log"> Tools Manager</h1>
   <div class="panel">
     <form
-      id="log"
+      class="form-panel"
       (ngSubmit)="onSubmit()"
       #f="ngForm">
-      <input
-        placeholder="Username"
-        name="username"
-        ngModel
-        type="username"
-        class="logInput">
-      <input
-        placeholder="Password"
-        name="password"
-        ngModel
-        type="password"
-        class="logInput">
-      <button type="submit" class="btn btn-success">Log in</button>
+
+      <div class="btn-group log-input-first">
+        <span class="icon-left">
+          <i class="fa fa-user" aria-hidden="true"></i>
+</span>
+        <input
+          placeholder="Username"
+          name="username"
+          ngModel
+          type="username"
+          class="log-input ">
+      </div>
+
+      <div class="btn-group">
+        <span class="icon-left">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+        <input
+          placeholder="Password"
+          name="password"
+          ngModel
+          type="password"
+          class="log-input">
+      </div>
+
+      <div class="-checkbox">
+        <app-checkbox></app-checkbox>
+        <span>Remember me</span>
+      </div>
+
+      <div class="log-in-button">
+        <button type="submit" class="btn log-button text-center ">Log in</button>
+      </div>
     </form>
+
+
   </div>
 </div>
