@@ -38,10 +38,12 @@
 .dropdown-item {
   color: #4b4b4b;
 }
+
 .dropdown-item:hover {
   color: #497c25;
   background-color: #d6e7b8;
 }
+
 .link:hover {
   background-color: #91c33c;
   color: #eef3ef;

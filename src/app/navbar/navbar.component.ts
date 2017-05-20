@@ -7,6 +7,7 @@ import {Component} from '@angular/core';
 })
 export class NavbarComponent {
   dropdownShow = false;
+
   DropdownShow() {
     return this.dropdownShow = !this.dropdownShow;
   }

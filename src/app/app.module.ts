@@ -16,6 +16,8 @@ import {CheckboxComponent} from './checkbox/checkbox.component';
 import {CutPipe} from './pipes/cut.pipe';
 import { MainComponent } from './main/main.component';
 import { AdminComponent } from './admin/admin.component';
+import {CategoryComponent} from './category/category.component';
+import {DataService} from './services/data.service';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { AdminComponent } from './admin/admin.component';
     CheckboxComponent,
     CutPipe,
     MainComponent,
-    AdminComponent
+    AdminComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { AdminComponent } from './admin/admin.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ToolsService],
+  providers: [ToolsService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

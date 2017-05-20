@@ -1,11 +1,10 @@
 <div class="dashboard">
+
   <div class="filter">
     <span class="filter-title">FILTERS</span>
 
-    <div *ngFor="let tool of toolsListCategory" class="filter-category">
-      <app-checkbox></app-checkbox>
-      {{tool}}
-
+    <div *ngFor="let category of toolsListCategory" class="filter-category">
+      <app-category [name]="category.name"></app-category>
     </div>
   </div>
 
@@ -14,4 +13,5 @@
       <app-tool [Tool]="tool"></app-tool>
     </div>
   </div>
+
 </div>
