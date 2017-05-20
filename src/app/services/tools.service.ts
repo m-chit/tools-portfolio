@@ -36,7 +36,7 @@ export class ToolsService {
       'ut labore, ad sed do eiusmod minimtation ullamco.',
       image: '../../assets/logo/logo-8.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: ['Bootstrap', 'GitHub']
     },
     {
@@ -44,7 +44,7 @@ export class ToolsService {
       details: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
       image: '../../assets/logo/logo-10.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: ['Java Script', 'Node.js', 'Bootstrap', 'GitHub']
     },
     {
@@ -52,7 +52,7 @@ export class ToolsService {
       details: 'Duis dolore nulla.',
       image: '../../assets/logo/logo-1.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: ['Java Script', 'Node.js', 'GitHub']
     },
     {
@@ -63,7 +63,7 @@ export class ToolsService {
       'Excepteur sint occaecat cupidatat non proident.',
       image: '../../assets/logo/logo-3.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'HR',
       tag: ['Node.js', 'Bootstrap', 'GitHub']
     },
     {
@@ -71,7 +71,7 @@ export class ToolsService {
       details: 'Duis dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
       image: '../../assets/logo/logo-5.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: ['Java Script', 'Node.js', 'Bootstrap', 'GitHub']
     },
     {
@@ -80,7 +80,7 @@ export class ToolsService {
       'eu fugiat nulla pariatur.',
       image: '../../assets/logo/logo-7.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: []
     },
     {
@@ -91,7 +91,7 @@ export class ToolsService {
       'Excepteur sint occaecat cupidatat non proident.',
       image: '../../assets/logo/logo-9.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: ['Java Script', 'Bootstrap', 'GitHub']
     },
     {
@@ -102,7 +102,7 @@ export class ToolsService {
       'Excepteur sint occaecat cupidatat non proident.',
       image: '../../assets/logo/logo-11.png',
       favorite: false,
-      category: 'Favorites',
+      category: 'Health care',
       tag: ['Node.js', 'Bootstrap']
     }
   ];

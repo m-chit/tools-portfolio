@@ -1,55 +1,70 @@
 .tool-shell {
   display: flex;
-  height: 405px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
   width: 365px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 25px 0 25px 0;
   border: solid .1rem #f4f4f4;
   box-shadow: 4px 4px 6px rgba(130, 130, 130, .1);
 }
 
 .tool {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   align-items: center;
   background-color: #ffffff;
-  color: #333;
+  color: #4b4b4b;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 .tool-image {
-  width: 20%;
+  margin-top: 20px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
 }
 
 .tool-title-font {
+  margin-top: 10px;
+  font-weight: 600;
+  font-family: Consolas, monaco, monospace;
   color: #333333;
   font-size: 1.2rem;
 }
 
+.tool-tag-font {
+  color: #bdbdbd;
+  font-size: .8rem;
+}
+
+
+.tags {
+  display: flex;
+}
 .tool-details-font {
-  color: #333333;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: solid 1px #eee;
+  text-align: justify;
+  color: #585858;
   font-size: .9rem;
 }
-
-.button-heart {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.heart-button {
   background-color: transparent;
-  color: #c80034;
-  font-size: 1.5rem;
   border: none;
+  font-size: 1.3rem;
 }
 
-.button-heart:hover {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: transparent;
-  color: #c80034;
-  font-size: 1.5rem;
-  border: none;
+.heart-empty {
+color: #4b4b4b;
+}
+
+.heart-filled {
+color: #529a2f;
 }

@@ -1,21 +1,28 @@
 <div class="tool-shell">
-  <div class="tool">
+  <div class="tool text-center">
 
     <img class="tool-image" [src]="tool.image" alt=" ">
 
-    <span class="tool-title-font"> {{tool.name}} </span>
-    <span>x, y, d, gg</span>
-    <hr>
-    <span class="tool-details-font"> {{tool.details}} </span>
+    <span class="tool-title-font"> {{tool.name | cut:25}} </span>
 
+    <div class="tags">
+      <span
+      class="tool-tag-font"
+    > {{tool.tag}}</span>
+    </div>
+
+
+    <span class="tool-details-font"> {{tool.details | cut:145}} </span>
+  </div>
+
+  <div class="buttons text-center">
     <button
-      (click)="tool.favorite = !tool.favorite"
-      [ngClass]="{buttonActive: tool.favorite}"
-      class="button-heart">
-      ♥
+      class="heart-button"
+      (click)="tool.favorite = !tool.favorite">
+      <i *ngIf="!tool.favorite" class="fa fa-heart-o heart-empty" aria-hidden="true"></i>
+      <i *ngIf="tool.favorite" class="fa fa-heart heart-filled" aria-hidden="true"></i>
     </button>
 
     <app-modal-details [Tool]="tool"></app-modal-details>
-
   </div>
 </div>

@@ -59,11 +59,7 @@
   border: none;
   margin-left: 20px;
   padding: 6px;
-  width: 38px;
-}
-
-.log-in-button {
-  display: block;
+  width: 36px;
 }
 
 .-checkbox {
@@ -80,7 +76,7 @@
   color: white;
   text-shadow: 0 0 3px #529a2f;
   font-weight: 700;
-  font-family: Consolas,monaco,monospace;
+  font-family: Consolas, monaco, monospace;
   font-size: 1rem;
   padding: 10px 30px 10px 30px;
   border: solid 1px #4a8a2a;
@@ -97,7 +93,6 @@
     background-size: cover;
   }
   25% {
-
     background: url(../../assets/img/bg-k.png) no-repeat bottom center fixed;
     background-size: cover;
   }

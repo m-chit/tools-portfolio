@@ -15,15 +15,15 @@
   color: #393b38;
   font-size: 2rem;
   margin-top: 50px;
-  font-family: Consolas,monaco,monospace;
+  font-family: Consolas, monaco, monospace;
   font-weight: 600;
 }
 
 .filter-category {
 
   font-weight: 500;
-  padding:  10px 0 5px 25px;
-  font-family: Consolas,monaco,monospace;
+  padding: 10px 0 5px 25px;
+  font-family: Consolas, monaco, monospace;
   font-size: 1rem;
   color: #393b38;
   display: flex;
