@@ -1,8 +1,13 @@
 <nav id="navbar-nav" class="navbar navbar-toggleable-md bg-faded">
   <div class="collapse navbar-collapse">
-    <a class="nav-link link active" [routerLink]="['/dashboard']">HOME</a>
-    <a class="nav-link link" [routerLink]="['/dashboard']">PROFILE</a>
-    <a class="nav-link link" [routerLink]="['/dashboard']">ADMIN PANEL</a>
-    <a class="nav-link link" [routerLink]="['/landing-page']">LOG OUT</a>
+    <a class="nav-link link active" [routerLink]="['/dashboard']">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      HOME</a>
+    <a class="nav-link link" [routerLink]="['/dashboard']">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      ADMIN</a>
+    <a class="nav-link link" [routerLink]="['/landing-page']">
+      <i class="fa fa-power-off" aria-hidden="true"></i>
+      LOG OUT</a>
   </div>
 </nav>
