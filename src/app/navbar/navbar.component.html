@@ -1,28 +1,16 @@
 <nav class="navbar-nav navbar navbar-toggleable-md bg-faded">
   <div class="collapse navbar-collapse">
-    <a class="nav-link link active" [routerLink]="['/dashboard']">
+    <a class="nav-link link " [routerLink]="['/dashboard']">
       <i class="fa fa-home" aria-hidden="true"></i>
-      HOME</a>
+      <span class="active">HOME</span></a>
     <a class="nav-link link" [routerLink]="['/admin']">
       <i class="fa fa-user" aria-hidden="true"></i>
       ADMIN</a>
 
 
-    <div
-      class="link dropdown"
-      (click)="DropdownShow()"
-      [ngClass]="{'show': dropdownShow}">
-      <button
-        class="my-dropdown"
-        type="button"
-        id="dropdownMenu2"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        USERNAME <i class="fa fa-caret-down" aria-hidden="true"></i>
-      </button>
-
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <div class="link dropdown">
+      <button class="my-dropdown">USERNAME <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <div class="dropdown-content">
         <button class="dropdown-item" type="button" [routerLink]="['/landing']">
           <i class="fa fa-power-off" aria-hidden="true"></i>
           Log out

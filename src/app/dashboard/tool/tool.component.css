@@ -10,7 +10,15 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 4px 4px 6px rgba(130, 130, 130, .1);
+  transition-duration: 2s;
 }
+
+.tool-shell:hover {
+  box-shadow: 6px 6px 30px rgba(0, 0, 0, .5);
+  transition-duration: 2s;
+}
+
+
 
 .tool {
   padding: 0 10px 10px 10px;
@@ -62,14 +70,9 @@
 
 .heart-button {
   background-color: transparent;
+  cursor: pointer;
   border: none;
   font-size: 1.3rem;
-}
-
-.heart-empty {
-  color: #529a2f;
-}
-
-.heart-filled {
+  outline: none;
   color: #529a2f;
 }

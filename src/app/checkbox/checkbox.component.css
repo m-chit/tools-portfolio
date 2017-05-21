@@ -8,6 +8,8 @@
   border-radius: 3px;
   background-color: transparent;
   border: solid 1px #000;
+  cursor: pointer;
+  outline: none;
 }
 
 .active {
