@@ -9,7 +9,7 @@ import {ToolModel} from '../models/tool.model';
 })
 export class DashboardComponent implements OnInit {
   toolsList: ToolModel[] = [];
-  toolsListCategory: {name: string, isActive: boolean}[];
+  toolsListCategory: { name: string, isActive: boolean }[];
 
   constructor(private toolsService: ToolsService) {
   }

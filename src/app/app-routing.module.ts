@@ -9,10 +9,12 @@ import {AdminComponent} from './admin/admin.component';
 
 const appRoutes: Routes = [
   {path: 'landing', component: LandingPageComponent},
-  {path: '', component: MainComponent, children: [
+  {
+    path: '', component: MainComponent, children: [
     {path: '', component: DashboardComponent},
     {path: 'admin', component: AdminComponent}
-  ] },
+  ]
+  },
   {path: 'not-found', component: NotFoundComponent},
   {path: '**', redirectTo: 'not-found'}
 ];

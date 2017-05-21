@@ -12,12 +12,10 @@ export class ModalDetailsComponent {
 
   showModal() {
     this.hidden = false;
-    console.log('show');
   }
 
   hiddenModal() {
     this.hidden = true;
-    console.log('destroy');
   }
 
 

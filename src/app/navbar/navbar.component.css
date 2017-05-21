@@ -22,7 +22,8 @@
   margin-left: auto;
   margin-right: 20px;
 }
- /*            iiiiiiiiiiii          */
+
+/*            iiiiiiiiiiii          */
 .my-dropdown, .my-dropdown:focus {
   cursor: pointer;
   background-color: transparent;
@@ -40,7 +41,7 @@
   left: 0;
   background-color: #f9f9f9;
   width: 100%;
-  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 

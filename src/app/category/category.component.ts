@@ -10,7 +10,8 @@ export class CategoryComponent {
   @Input() name: string;
   checkbox = false;
 
-  constructor(private toolsService: ToolsService) {}
+  constructor(private toolsService: ToolsService) {
+  }
 
   onCheckboxChange(newCheckbox: boolean) {
     this.checkbox = newCheckbox;

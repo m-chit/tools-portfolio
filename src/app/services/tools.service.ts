@@ -6,9 +6,11 @@ import {Subject} from 'rxjs/Subject';
 @Injectable()
 export class ToolsService {
   filteredTools: ToolModel[] = [];
+  filteredFavTools: ToolModel[] = [];
   toolsList: ToolModel[] = [];
-  toolsListCategory: {name: string, isActive: boolean}[];
+  toolsListCategory: { name: string, isActive: boolean }[];
   filteredToolsSubject: Subject<ToolModel[]> = new Subject();
+  favorites = false;
 
   constructor(private dataService: DataService) {
     this.toolsList = this.dataService.toolsList;
@@ -22,12 +24,22 @@ export class ToolsService {
   }
 
   categoryChange(name: string, isActive: boolean) {
-    const currentCategory = this.toolsListCategory.find(category => category.name === name);
-    if (currentCategory !== undefined) {
-      currentCategory.isActive = isActive;
+    if (name !== 'Favorites') {
+      const currentCategory = this.toolsListCategory.find(category => category.name === name);
+      if (currentCategory !== undefined) {
+        currentCategory.isActive = isActive;
+      }
+      if (this.favorites) {
+        this.reloadFavorites();
+      } else {
+        this.reloadFilters();
+      }
+    } else {
+      this.favorites = isActive;
+      this.reloadFavorites();
     }
-    this.reloadFilters();
   }
+
   reloadFilters() {
     const activeCategories = this.toolsListCategory.filter((current) => current.isActive);
     if (activeCategories.length === 0) {
@@ -38,5 +50,22 @@ export class ToolsService {
       });
     }
     this.filteredToolsSubject.next(this.filteredTools);
+  }
+
+  reloadFavorites() {
+    if (this.favorites) {
+      const activeCategories = this.toolsListCategory.filter((current) => current.isActive);
+      this.filteredTools = this.toolsList.filter((current) => current.favorite);
+      if (activeCategories.length === 0) {
+        this.filteredToolsSubject.next(this.filteredTools);
+      } else {
+        this.filteredFavTools = this.filteredTools.filter((current) => {
+          return activeCategories.find((category) => category.name === current.category) !== undefined;
+        });
+        this.filteredToolsSubject.next(this.filteredFavTools);
+      }
+    } else {
+      this.reloadFilters();
+    }
   }
 }

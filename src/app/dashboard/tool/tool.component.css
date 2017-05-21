@@ -14,11 +14,10 @@
 }
 
 .tool-shell:hover {
-  box-shadow: 6px 6px 30px rgba(0, 0, 0, .5);
+  box-shadow: 4px 4px 25px rgba(130, 130, 130, .7);
   transition-duration: 2s;
+  transition-delay: .5s;
 }
-
-
 
 .tool {
   padding: 0 10px 10px 10px;
