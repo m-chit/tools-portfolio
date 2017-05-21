@@ -10,6 +10,6 @@ export class LandingPageComponent {
   constructor(private router: Router) { }
 
   onSubmit() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/']);
   }
 }
