@@ -1,71 +1,51 @@
 import {Injectable} from '@angular/core';
 import {ToolModel} from '../models/tool.model';
 import {DataService} from './data.service';
+import {FilterModel} from '../models/filter.model';
 import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class ToolsService {
-  filteredTools: ToolModel[] = [];
-  filteredFavTools: ToolModel[] = [];
-  toolsList: ToolModel[] = [];
-  toolsListCategory: { name: string, isActive: boolean }[];
-  filteredToolsSubject: Subject<ToolModel[]> = new Subject();
-  favorites = false;
+  private tools: ToolModel[];
+  filterNames: {category: string, tags: string[]}[];
+  toolsToDisplay: ToolModel[];
+  filteredToolsSubject = new Subject();
 
   constructor(private dataService: DataService) {
-    this.toolsList = this.dataService.toolsList;
-    this.toolsListCategory = this.toolsList.reduce((acc, value) => {
-      if (acc.find(category => category.name === value.category) === undefined) {
-        acc = [...acc, {name: value.category, isActive: false}];
+    this.tools = this.dataService.toolsList;
+    this.filterNames = this.getFilterNames();
+    this.toolsToDisplay = this.tools;
+  }
+
+  getFilterNames() {
+    return this.tools.reduce((filterNames, tool) => {
+      const foundFilterName = filterNames.find(filterName => filterName.category === tool.category);
+      if (foundFilterName === undefined) {
+        filterNames = [...filterNames, {category: tool.category, tags: tool.tags}];
+    } else {
+        const setOfTags = new Set([...foundFilterName.tags, ...tool.tags]);
+        foundFilterName.tags = [...setOfTags];
       }
-      return acc;
+      return filterNames;
     }, []);
-    this.filteredTools = this.toolsList;
   }
 
-  categoryChange(name: string, isActive: boolean) {
-    if (name !== 'Favorites') {
-      const currentCategory = this.toolsListCategory.find(category => category.name === name);
-      if (currentCategory !== undefined) {
-        currentCategory.isActive = isActive;
-      }
-      if (this.favorites) {
-        this.reloadFavorites();
-      } else {
-        this.reloadFilters();
-      }
-    } else {
-      this.favorites = isActive;
-      this.reloadFavorites();
+  filterTools(filterObject: {filterFav: boolean, favStatus: boolean, filters: FilterModel[]}) {
+    const clearedFilters = filterObject.filters.filter(filter => filter !== undefined && filter.category !== '');
+    this.toolsToDisplay = this.tools;
+    if (filterObject.filterFav) {
+      this.toolsToDisplay = this.toolsToDisplay.filter(tool => tool.favorite === filterObject.favStatus);
     }
-  }
-
-  reloadFilters() {
-    const activeCategories = this.toolsListCategory.filter((current) => current.isActive);
-    if (activeCategories.length === 0) {
-      this.filteredTools = this.toolsList;
-    } else {
-      this.filteredTools = this.toolsList.filter((current) => {
-        return activeCategories.find((category) => category.name === current.category) !== undefined;
+    if (clearedFilters.length !== 0) {
+      this.toolsToDisplay = this.toolsToDisplay.filter(tool => {
+        const foundFilterName = clearedFilters.find(filterName => filterName.category === tool.category);
+        if (foundFilterName === undefined) {
+          return false;
+        } else {
+          return foundFilterName.tags.every(filterTag => tool.tags.includes(filterTag));
+        }
       });
     }
-    this.filteredToolsSubject.next(this.filteredTools);
-  }
-
-  reloadFavorites() {
-    if (this.favorites) {
-      const activeCategories = this.toolsListCategory.filter((current) => current.isActive);
-      this.filteredTools = this.toolsList.filter((current) => current.favorite);
-      if (activeCategories.length === 0) {
-        this.filteredToolsSubject.next(this.filteredTools);
-      } else {
-        this.filteredFavTools = this.filteredTools.filter((current) => {
-          return activeCategories.find((category) => category.name === current.category) !== undefined;
-        });
-        this.filteredToolsSubject.next(this.filteredFavTools);
-      }
-    } else {
-      this.reloadFilters();
-    }
+    this.filteredToolsSubject.next(this.toolsToDisplay);
   }
 }

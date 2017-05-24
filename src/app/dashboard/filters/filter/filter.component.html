@@ -1,0 +1,13 @@
+<div class="category-class">
+  <div class="filter-item">
+    <app-checkbox (checkboxChange)="onCategoryChange($event)"></app-checkbox>
+    <span> {{ name }} </span>
+  </div>
+
+  <div *ngIf="filter.category !== ''" >
+    <div *ngFor="let tag of tags; let i = index" class="filter-tag" >
+      <app-checkbox (checkboxChange)="onTagChange($event, i)"></app-checkbox> {{ tag }}
+    </div>
+  </div>
+</div>
+

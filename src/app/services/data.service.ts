@@ -12,7 +12,7 @@ export class DataService {
       image: '../../assets/logo/logo-2.png',
       favorite: false,
       category: 'Programming',
-      tag: ['Java Script', 'Node.js', 'Bootstrap']
+      tags: ['Javascript', 'Node.js', 'Bootstrap']
     },
     {
       name: 'Lorem ipsum',
@@ -20,7 +20,7 @@ export class DataService {
       image: '../../assets/logo/logo-4.png',
       favorite: false,
       category: 'Programming',
-      tag: ['Java Script', 'Bootstrap']
+      tags: ['Javascript', 'Bootstrap']
     },
     {
       name: 'Lorem ipsum dolor',
@@ -28,7 +28,7 @@ export class DataService {
       image: '../../assets/logo/logo-6.png',
       favorite: true,
       category: 'Programming',
-      tag: ['Java Script', 'Node.js', 'Bootstrap']
+      tags: ['Javascript', 'Node.js', 'Bootstrap']
     },
     {
       name: 'Consectetur elit',
@@ -37,7 +37,7 @@ export class DataService {
       image: '../../assets/logo/logo-8.png',
       favorite: true,
       category: 'Health care',
-      tag: ['Bootstrap', 'GitHub']
+      tags: ['Bootstrap', 'GitHub']
     },
     {
       name: 'Duis voluptate',
@@ -45,15 +45,15 @@ export class DataService {
       image: '../../assets/logo/logo-10.png',
       favorite: false,
       category: 'Health care',
-      tag: ['Java Script', 'Node.js', 'Bootstrap', 'GitHub']
+      tags: ['Javascript', 'Node.js', 'Bootstrap', 'GitHub']
     },
     {
       name: 'Duis eu con adipsc elit si in adipiscing elit',
       details: 'Duis dolore nulla.',
       image: '../../assets/logo/logo-1.png',
       favorite: false,
-      category: 'Health care',
-      tag: ['Java Script', 'Node.js', 'GitHub']
+      category: 'HR',
+      tags: ['Javascript', 'Node.js', 'GitHub']
     },
     {
       name: 'Excepteur sint occaecat cupidatat',
@@ -64,7 +64,7 @@ export class DataService {
       image: '../../assets/logo/logo-3.png',
       favorite: true,
       category: 'HR',
-      tag: ['Node.js', 'Bootstrap', 'GitHub']
+      tags: ['Node.js', 'Bootstrap', 'GitHub']
     },
     {
       name: 'Duiduptate',
@@ -72,7 +72,7 @@ export class DataService {
       image: '../../assets/logo/logo-5.png',
       favorite: false,
       category: 'Health care',
-      tag: ['Java Script', 'Node.js', 'Bootstrap', 'GitHub']
+      tags: ['Javascript', 'Node.js', 'Bootstrap', 'GitHub']
     },
     {
       name: 'Irure dolor in reprehenderit irure dolor in repreh',
@@ -81,7 +81,7 @@ export class DataService {
       image: '../../assets/logo/logo-7.png',
       favorite: true,
       category: 'Health care',
-      tag: []
+      tags: []
     },
     {
       name: 'Excepnt occaecat cupidatat',
@@ -92,7 +92,7 @@ export class DataService {
       image: '../../assets/logo/logo-9.png',
       favorite: false,
       category: 'Health care',
-      tag: ['Java Script', 'Bootstrap', 'GitHub']
+      tags: ['Javascript', 'Bootstrap', 'GitHub']
     },
     {
       name: 'Axcedatat',
@@ -103,7 +103,7 @@ export class DataService {
       image: '../../assets/logo/logo-11.png',
       favorite: false,
       category: 'Health care',
-      tag: ['Node.js', 'Bootstrap']
+      tags: ['Node.js', 'Bootstrap']
     }
   ];
 }

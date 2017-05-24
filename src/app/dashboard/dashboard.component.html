@@ -1,19 +1,4 @@
 <div class="dashboard">
-
-  <div class="filter">
-    <span class="filter-title">FILTERS</span>
-
-    <app-category [name]="'Favorites'"></app-category>
-
-    <div *ngFor="let category of toolsListCategory" class="filter-category">
-      <app-category [name]="category.name"></app-category>
-    </div>
-  </div>
-
-  <div class="tools">
-    <div *ngFor="let tool of toolsList">
-      <app-tool [Tool]="tool"></app-tool>
-    </div>
-  </div>
-
+  <app-filters style="flex-basis: 25%"></app-filters>
+  <app-tools style="flex-basis: 75%"></app-tools>
 </div>

@@ -1,0 +1,20 @@
+.category-class {
+  width: 18vw;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #e0e0e0;
+}
+
+.filter-tag {
+  margin: 10px 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-tag:last-child {
+  margin-bottom: 30px;
+}
