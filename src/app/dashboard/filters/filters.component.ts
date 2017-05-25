@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ToolsService} from '../../services/tools.service';
 import {FilterModel} from '../../models/filter.model';
 
@@ -9,7 +9,7 @@ import {FilterModel} from '../../models/filter.model';
 })
 export class FiltersComponent implements OnInit {
   filterNames: { category: string, tags: string[] }[];
-  filterObject: {filterFav: boolean, favStatus: boolean, filters: FilterModel[]};
+  filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] };
 
   constructor(private toolsService: ToolsService) {
     this.filterObject = {filterFav: false, favStatus: false, filters: []};

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ToolModel} from '../../models/tool.model';
 import {ToolsService} from '../../services/tools.service';
 

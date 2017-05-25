@@ -18,6 +18,7 @@
   left: 25vw;
   width: 73vw;
 }
+
 .shadow-top {
   background: linear-gradient(rgba(255, 255, 255, .7), transparent);
   display: flex;
@@ -27,4 +28,3 @@
   left: 25vw;
   width: 73vw;
 }
-

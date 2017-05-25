@@ -7,7 +7,7 @@ import {Subject} from 'rxjs/Subject';
 @Injectable()
 export class ToolsService {
   private tools: ToolModel[];
-  filterNames: {category: string, tags: string[]}[];
+  filterNames: { category: string, tags: string[] }[];
   toolsToDisplay: ToolModel[];
   filteredToolsSubject = new Subject();
 
@@ -22,7 +22,7 @@ export class ToolsService {
       const foundFilterName = filterNames.find(filterName => filterName.category === tool.category);
       if (foundFilterName === undefined) {
         filterNames = [...filterNames, {category: tool.category, tags: tool.tags}];
-    } else {
+      } else {
         const setOfTags = new Set([...foundFilterName.tags, ...tool.tags]);
         foundFilterName.tags = [...setOfTags];
       }
@@ -30,7 +30,7 @@ export class ToolsService {
     }, []);
   }
 
-  filterTools(filterObject: {filterFav: boolean, favStatus: boolean, filters: FilterModel[]}) {
+  filterTools(filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] }) {
     const clearedFilters = filterObject.filters.filter(filter => filter !== undefined && filter.category !== '');
     this.toolsToDisplay = this.tools;
     if (filterObject.filterFav) {
