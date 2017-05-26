@@ -3,16 +3,41 @@
 }
 
 .filter-item {
+  color: #393b38;
+  font-weight: 600;
   display: flex;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: solid 1px #e0e0e0;
+  border-bottom: solid 1px #d6e7b8;
+  animation-name: filters-ani;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode:forwards;
 }
 
 .filter-tag {
-  margin: 10px 0 0 20px;
+  padding: 0 0 0 10px;
   display: flex;
+  background-color: #fbfdfb;
   align-items: center;
+  animation-name: tags-ani;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes tags-ani {
+  0%   { height: 0px; color: transparent}
+  100% { height: 45px; color: #393b38}
+}
+
+@keyframes filters-ani {
+  0%   { height: 0px; }
+  100% { height: 40px; }
+}
+
+.filter-tag:last-child {
+  border-bottom: none;
 }
 
 .filter-tag:last-child {
