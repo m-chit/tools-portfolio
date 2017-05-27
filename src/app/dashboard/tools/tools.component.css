@@ -1,6 +1,6 @@
 .tools {
   padding: 0 2vw 0 2vw;
-  margin: 9vh 2vw 0 0;
+  margin: 9vh 50px 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -16,7 +16,7 @@
   position: fixed;
   top: 95vh;
   left: 25vw;
-  width: 73vw;
+  width: 100%;
 }
 
 .shadow-top {
@@ -26,5 +26,25 @@
   position: fixed;
   top: 9vh;
   left: 25vw;
-  width: 73vw;
+  width: 100%;
+}
+
+@media all and (max-width: 1100px) {
+  .tools {
+    padding: 0;
+    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    height: auto;
+  }
+
+  .shadow-bottom {
+    background: none;
+  }
+
+  .shadow-top {
+    background: none
+  }
 }
