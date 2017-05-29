@@ -12,7 +12,7 @@ export class DataService {
       image: '../../assets/logo/logo-2.png',
       favorite: false,
       category: 'Programming',
-      tags: ['Javascript', 'Node.js', 'Bootstrap']
+      tags: ['Javascript', 'Node.js']
     },
     {
       name: 'Lorem ipsum',
@@ -36,7 +36,7 @@ export class DataService {
       'ut labore, ad sed do eiusmod minimtation ullamco.',
       image: '../../assets/logo/logo-8.png',
       favorite: true,
-      category: 'Health care',
+      category: 'Programming',
       tags: ['Bootstrap', 'GitHub']
     },
     {
@@ -44,7 +44,7 @@ export class DataService {
       details: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
       image: '../../assets/logo/logo-10.png',
       favorite: false,
-      category: 'Health care',
+      category: 'Programming',
       tags: ['Javascript', 'Node.js', 'Bootstrap', 'GitHub']
     },
     {
@@ -52,7 +52,7 @@ export class DataService {
       details: 'Duis dolore nulla.',
       image: '../../assets/logo/logo-1.png',
       favorite: false,
-      category: 'HR',
+      category: 'Programming',
       tags: ['Javascript', 'Node.js', 'GitHub']
     },
     {
@@ -63,8 +63,8 @@ export class DataService {
       'Excepteur sint occaecat cupidatat non proident.',
       image: '../../assets/logo/logo-3.png',
       favorite: true,
-      category: 'HR',
-      tags: ['Node.js', 'Bootstrap', 'GitHub']
+      category: 'Health care',
+      tags: ['Diet', 'Cycling', 'Volleyball', 'Football']
     },
     {
       name: 'Duiduptate',
@@ -72,7 +72,7 @@ export class DataService {
       image: '../../assets/logo/logo-5.png',
       favorite: false,
       category: 'Health care',
-      tags: ['Javascript', 'Node.js', 'Bootstrap', 'GitHub']
+      tags: ['Running', 'Football', 'Diet']
     },
     {
       name: 'Irure dolor in reprehenderit irure dolor in repreh',
@@ -81,7 +81,7 @@ export class DataService {
       image: '../../assets/logo/logo-7.png',
       favorite: true,
       category: 'Health care',
-      tags: []
+      tags: ['Diet']
     },
     {
       name: 'Excepnt occaecat cupidatat',
@@ -92,7 +92,7 @@ export class DataService {
       image: '../../assets/logo/logo-9.png',
       favorite: false,
       category: 'Health care',
-      tags: ['Javascript', 'Bootstrap', 'GitHub']
+      tags: ['Running', 'Cycling']
     },
     {
       name: 'Axcedatat',
@@ -103,7 +103,7 @@ export class DataService {
       image: '../../assets/logo/logo-11.png',
       favorite: false,
       category: 'Health care',
-      tags: ['Node.js', 'Bootstrap']
+      tags: ['Diet', 'Running', 'Football']
     }
   ];
 }

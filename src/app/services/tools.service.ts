@@ -24,7 +24,7 @@ export class ToolsService {
         filterNames = [...filterNames, {category: tool.category, tags: tool.tags}];
       } else {
         const setOfTags = new Set([...foundFilterName.tags, ...tool.tags]);
-        foundFilterName.tags = [...setOfTags];
+        foundFilterName.tags = Array.from(setOfTags);
       }
       return filterNames;
     }, []);
