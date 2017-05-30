@@ -1,24 +1,31 @@
 import {Injectable} from '@angular/core';
 import {ToolModel} from '../models/tool.model';
-import {DataService} from './data.service';
 import {FilterModel} from '../models/filter.model';
 import {Subject} from 'rxjs/Subject';
+import {Http} from '@angular/http';
 
 @Injectable()
 export class ToolsService {
-  private tools: ToolModel[];
+  tools: ToolModel[] = [];
   filterNames: { category: string, tags: string[] }[];
-  toolsToDisplay: ToolModel[];
+  toolsToDisplay: ToolModel[] = [];
   filteredToolsSubject = new Subject();
+  ToolsSubject = new Subject();
+  FiltersSubject = new Subject();
 
-  constructor(private dataService: DataService) {
-    this.tools = this.dataService.toolsList;
-    this.filterNames = this.getFilterNames();
-    this.toolsToDisplay = this.tools;
+  constructor(private http: Http) {
+    this.http.get('/api/tools').subscribe(
+      (response) => {
+       this.tools = response.json();
+        this.toolsToDisplay = this.tools;
+        this.ToolsSubject.next(this.toolsToDisplay);
+        this.getFilterNames();
+      }
+    );
   }
 
   getFilterNames() {
-    return this.tools.reduce((filterNames, tool) => {
+    this.filterNames = this.tools.reduce((filterNames, tool) => {
       const foundFilterName = filterNames.find(filterName => filterName.category === tool.category);
       if (foundFilterName === undefined) {
         filterNames = [...filterNames, {category: tool.category, tags: tool.tags}];
@@ -28,6 +35,7 @@ export class ToolsService {
       }
       return filterNames;
     }, []);
+    this.FiltersSubject.next(this.filterNames);
   }
 
   filterTools(filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] }) {

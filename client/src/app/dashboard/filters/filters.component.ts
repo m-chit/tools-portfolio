@@ -16,6 +16,9 @@ export class FiltersComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.toolsService.FiltersSubject.subscribe(
+      (response: { category: string, tags: string[] }[]) => this.filterNames = response
+    );
     this.filterNames = this.toolsService.filterNames;
   }
 

@@ -17,7 +17,6 @@ import {CutPipe} from './pipes/cut.pipe';
 import {MainComponent} from './main/main.component';
 import {AdminComponent} from './admin/admin.component';
 import {FilterComponent} from './dashboard/filters/filter/filter.component';
-import {DataService} from './services/data.service';
 import {FiltersComponent} from './dashboard/filters/filters.component';
 import {ToolsComponent} from './dashboard/tools/tools.component';
 
@@ -45,7 +44,7 @@ import {ToolsComponent} from './dashboard/tools/tools.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ToolsService, DataService],
+  providers: [ToolsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

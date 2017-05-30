@@ -1,0 +1,38 @@
+<form
+  class="form-panel"
+  (ngSubmit)="onSubmit()"
+  #f="ngForm">
+
+  <input
+    placeholder="Title"
+    name="title"
+    ngModel
+    type="text"
+    class="log-input ">
+  <input
+    placeholder="Details"
+    name="details"
+    ngModel
+    type="text"
+    class="log-input ">
+  <input
+    placeholder="Img"
+    name="img"
+    ngModel
+    type="text"
+    class="log-input ">
+  <input
+    placeholder="Category"
+    name="category"
+    ngModel
+    type="text"
+    class="log-input ">
+  <input
+    placeholder="Tags"
+    name="tags"
+    ngModel
+    type="text"
+    class="log-input ">
+
+  <button type="submit" class="btn btn-outline-success">Add tool!</button>
+</form>

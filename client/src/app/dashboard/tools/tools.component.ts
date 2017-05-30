@@ -14,10 +14,12 @@ export class ToolsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.tools = this.toolsService.toolsToDisplay;
-    this.toolsService.filteredToolsSubject.subscribe(
-      (data: ToolModel[]) => this.tools = data
-    );
+   this.toolsService.ToolsSubject.subscribe(
+     (response: ToolModel[]) => this.tools = response
+   );
+  this.tools = this.toolsService.toolsToDisplay;
+   this.toolsService.filteredToolsSubject.subscribe(
+    (data: ToolModel[]) => this.tools = data
+   );
   }
-
 }
