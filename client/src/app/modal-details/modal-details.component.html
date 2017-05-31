@@ -1,31 +1,31 @@
 <div class="modal-background"
      *ngIf="hidden === false">
-  <div class="modal-window">
-    <img class="img-details" [src]="tool.image">
-    <h3> {{ tool.name }} </h3>
-    <p>{{ tool.details }}</p>
-    <div class="buttonFlex">
-      <button
-        class="heart-button"
-        (click)="tool.favorite = !tool.favorite">
-        <i *ngIf="!tool.favorite" class="fa fa-heart-o" aria-hidden="true"></i>
-        <i *ngIf="tool.favorite" class="fa fa-heart" aria-hidden="true"></i>
-      </button>
+    <div class="modal-window">
+        <img class="img-details" [src]="tool.image">
+        <h3> {{ tool.name }} </h3>
+        <p>{{ tool.details }}</p>
+        <div class="buttonFlex">
+            <button
+                    class="heart-button"
+                    (click)="tool.favorite = !tool.favorite">
+                <i *ngIf="!tool.favorite" class="fa fa-heart-o" aria-hidden="true"></i>
+                <i *ngIf="tool.favorite" class="fa fa-heart" aria-hidden="true"></i>
+            </button>
 
-      <button
-        (click)="hiddenModal()"
-        class="btn button-details"
-      >Close
-      </button>
+            <button
+                    (click)="hiddenModal()"
+                    class="btn button-details"
+            >Close
+            </button>
 
+        </div>
     </div>
-  </div>
 
 </div>
 
 
 <button
-  class="btn button-details"
-  (click)="showModal()">Details
+        class="btn button-details"
+        (click)="showModal()">Details
 </button>
 

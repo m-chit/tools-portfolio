@@ -1,41 +1,41 @@
 <div class="background">
-  <h1 class="title-log"> Tools Manager</h1>
-  <div class="panel">
-    <form
-      class="form-panel"
-      (ngSubmit)="onSubmit()"
-      #f="ngForm">
+    <h1 class="title-log"> Tools Manager</h1>
+    <div class="panel">
+        <form
+                class="form-panel"
+                (ngSubmit)="onSubmit()"
+                #f="ngForm">
 
-      <div class="btn-group log-input-first">
+            <div class="btn-group log-input-first">
         <span class="icon-left">
           <i class="fa fa-user" aria-hidden="true"></i>
         </span>
-        <input
-          placeholder="Username"
-          name="username"
-          ngModel
-          type="username"
-          class="log-input ">
-      </div>
+                <input
+                        placeholder="Username"
+                        name="username"
+                        ngModel
+                        type="username"
+                        class="log-input ">
+            </div>
 
-      <div class="btn-group">
+            <div class="btn-group">
         <span class="icon-left">
           <i class="fa fa-lock" aria-hidden="true"></i>
         </span>
-        <input
-          placeholder="Password"
-          name="password"
-          ngModel
-          type="password"
-          class="log-input">
-      </div>
+                <input
+                        placeholder="Password"
+                        name="password"
+                        ngModel
+                        type="password"
+                        class="log-input">
+            </div>
 
-      <div class="-checkbox">
-        <app-checkbox></app-checkbox>
-        <span>Remember me</span>
-      </div>
+            <div class="-checkbox">
+                <app-checkbox></app-checkbox>
+                <span>Remember me</span>
+            </div>
 
-      <button type="submit" class="btn log-button">Log in</button>
-    </form>
-  </div>
+            <button type="submit" class="btn log-button">Log in</button>
+        </form>
+    </div>
 </div>

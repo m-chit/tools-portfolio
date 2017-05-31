@@ -8,26 +8,26 @@ import {MainComponent} from './main/main.component';
 import {AdminComponent} from './admin/admin.component';
 
 const appRoutes: Routes = [
-  {path: 'landing', component: LandingPageComponent},
-  {
-    path: '', component: MainComponent, children: [
-    {path: '', component: DashboardComponent},
-    {path: 'admin', component: AdminComponent}
-  ]
-  },
-  {path: 'not-found', component: NotFoundComponent},
-  {path: '**', redirectTo: 'not-found'}
+    {path: 'landing', component: LandingPageComponent},
+    {
+        path: '', component: MainComponent, children: [
+        {path: '', component: DashboardComponent},
+        {path: 'admin', component: AdminComponent}
+    ]
+    },
+    {path: 'not-found', component: NotFoundComponent},
+    {path: '**', redirectTo: 'not-found'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(appRoutes)],
+    exports: [RouterModule]
 })
 
 export class AppRoutingModule implements OnInit {
-  constructor() {
-  }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 }

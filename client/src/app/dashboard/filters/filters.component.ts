@@ -3,27 +3,27 @@ import {ToolsService} from '../../services/tools.service';
 import {FilterModel} from '../../models/filter.model';
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+    selector: 'app-filters',
+    templateUrl: './filters.component.html',
+    styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
-  filterNames: { category: string, tags: string[] }[];
-  filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] };
+    filterNames: { category: string, tags: string[] }[];
+    filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] };
 
-  constructor(private toolsService: ToolsService) {
-    this.filterObject = {filterFav: false, favStatus: false, filters: []};
-  }
+    constructor(private toolsService: ToolsService) {
+        this.filterObject = {filterFav: false, favStatus: false, filters: []};
+    }
 
-  ngOnInit() {
-    this.toolsService.FiltersSubject.subscribe(
-      (response: { category: string, tags: string[] }[]) => this.filterNames = response
-    );
-    this.filterNames = this.toolsService.filterNames;
-  }
+    ngOnInit() {
+        this.toolsService.FiltersSubject.subscribe(
+            (response: { category: string, tags: string[] }[]) => this.filterNames = response
+        );
+        this.filterNames = this.toolsService.filterNames;
+    }
 
-  onFilterChanged(filter: FilterModel, index: number) {
-    this.filterObject.filters[index] = filter;
-    this.toolsService.filterTools(this.filterObject);
-  }
+    onFilterChanged(filter: FilterModel, index: number) {
+        this.filterObject.filters[index] = filter;
+        this.toolsService.filterTools(this.filterObject);
+    }
 }

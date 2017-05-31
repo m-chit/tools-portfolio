@@ -1,18 +1,18 @@
 .dashboard {
-  display: flex;
-  width: 100vw;
+    display: flex;
+    width: 100vw;
 }
 
 .filters-app {
-  flex-basis: 25%;
+    flex-basis: 25%;
 }
 
 .tools-app {
-  flex-basis: 75%;
+    flex-basis: 75%;
 }
 
 @media (max-width: 1100px) {
-  .dashboard {
-    flex-direction: column;
-  }
+    .dashboard {
+        flex-direction: column;
+    }
 }

@@ -1,11 +1,11 @@
 export class FilterModel {
-  category: string;
-  tags: string[];
+    category: string;
+    tags: string[];
 
-  constructor(category: string, tags: string[]) {
-    this.category = category;
-    this.tags = tags;
-  }
+    constructor(category: string, tags: string[]) {
+        this.category = category;
+        this.tags = tags;
+    }
 }
 
 

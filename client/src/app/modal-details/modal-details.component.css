@@ -1,70 +1,70 @@
 .modal-background {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .modal-window {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  padding: 30px;
-  border: solid 1px #ddd;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 30px;
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 60rem) {
-  .modal-window {
-    width: 80%;
-  }
+    .modal-window {
+        width: 80%;
+    }
 }
 
 .img-details {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
 }
 
 .button-details {
-  outline: none;
-  cursor: pointer;
-  margin-bottom: 10px;
-  background-color: transparent;
-  color: #529a2f;
-  border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #529a2f;
+    border: none;
 }
 
 .button-details:hover, .button-details:active, .button-details:focus {
-  color: #529a2f;
-  text-decoration: underline;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+    color: #529a2f;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .heart-button {
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  color: #529a2f;
-  font-size: 1.3rem;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #529a2f;
+    font-size: 1.3rem;
 }
 
 div > button {
-  margin: 10px;
+    margin: 10px;
 }
 
 .button-flex {
-  display: flex;
+    display: flex;
 }

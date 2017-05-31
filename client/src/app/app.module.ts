@@ -22,30 +22,30 @@ import {ToolsComponent} from './dashboard/tools/tools.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LandingPageComponent,
-    NavbarComponent,
-    DashboardComponent,
-    NotFoundComponent,
-    ToolComponent,
-    ModalDetailsComponent,
-    CheckboxComponent,
-    CutPipe,
-    MainComponent,
-    AdminComponent,
-    FiltersComponent,
-    ToolsComponent,
-    FilterComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AppRoutingModule
-  ],
-  providers: [ToolsService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LandingPageComponent,
+        NavbarComponent,
+        DashboardComponent,
+        NotFoundComponent,
+        ToolComponent,
+        ModalDetailsComponent,
+        CheckboxComponent,
+        CutPipe,
+        MainComponent,
+        AdminComponent,
+        FiltersComponent,
+        ToolsComponent,
+        FilterComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        AppRoutingModule
+    ],
+    providers: [ToolsService],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 .body-class {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 @media all and (max-width: 1100px) {
-  .body-class {
-    overflow: scroll;
-  }
+    .body-class {
+        overflow: scroll;
+    }
 }

@@ -1,72 +1,72 @@
 .navbar-nav {
-  position: fixed;
-  width: 100vw;
-  background-color: #529a2f;
-  padding: 0;
-  z-index: 1;
+    position: fixed;
+    width: 100vw;
+    background-color: #529a2f;
+    padding: 0;
+    z-index: 1;
 }
 
 .link {
-  cursor: pointer;
-  color: #eef3ef;
-  padding: 10px 30px 10px 30px;
-  font-family: Consolas, monaco, monospace;
-  font-weight: 700;
-  font-size: 1.1rem;
+    cursor: pointer;
+    color: #eef3ef;
+    padding: 10px 30px 10px 30px;
+    font-family: Consolas, monaco, monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .link:first-child {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .dropdown {
-  margin-left: auto;
-  margin-right: 20px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 .my-dropdown {
-  cursor: pointer;
-  color: #eef3ef;
-  background-color: transparent;
-  border: none;
-  padding: 10px 30px 10px 30px;
-  font-family: Consolas, monaco, monospace;
-  font-weight: 700;
-  font-size: 1.1rem;
-  outline: none;
+    cursor: pointer;
+    color: #eef3ef;
+    background-color: transparent;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    font-family: Consolas, monaco, monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+    outline: none;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  border: none;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-  width: 100%;
-  padding: 10px 0 10px 0;
-  background-color: #fff;
+    display: none;
+    position: absolute;
+    left: 0;
+    border: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+    width: 100%;
+    padding: 10px 0 10px 0;
+    background-color: #fff;
 }
 
 .dropdown, .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdown-item {
-  color: #4b4b4b;
+    color: #4b4b4b;
 }
 
 .dropdown-item:hover {
-  color: #529a2f;
-  background-color: #f9fcf3;
-  outline: none;
+    color: #529a2f;
+    background-color: #f9fcf3;
+    outline: none;
 }
 
 .link:hover, .link-dropdown:hover {
-  background-color: #91c33c;
-  color: #eef3ef;
+    background-color: #91c33c;
+    color: #eef3ef;
 }
 
 .active, .active:hover {
-  text-decoration: underline;
-  color: #fff;
+    text-decoration: underline;
+    color: #fff;
 }
