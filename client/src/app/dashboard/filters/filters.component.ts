@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {ToolsService} from '../../services/tools.service';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FilterModel} from '../../models/filter.model';
 
 @Component({
@@ -7,23 +6,17 @@ import {FilterModel} from '../../models/filter.model';
     templateUrl: './filters.component.html',
     styleUrls: ['./filters.component.css']
 })
-export class FiltersComponent implements OnInit {
-    filterNames: { category: string, tags: string[] }[];
+export class FiltersComponent {
+    @Input() filterNames: { category: string, tags: string[] }[] = [];
+    @Output() filterObjectEmitter = new EventEmitter<{ filterFav: boolean, favStatus: boolean, filters: FilterModel[] }>();
     filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] };
 
-    constructor(private toolsService: ToolsService) {
+    constructor() {
         this.filterObject = {filterFav: false, favStatus: false, filters: []};
-    }
-
-    ngOnInit() {
-        this.toolsService.FiltersSubject.subscribe(
-            (response: { category: string, tags: string[] }[]) => this.filterNames = response
-        );
-        this.filterNames = this.toolsService.filterNames;
     }
 
     onFilterChanged(filter: FilterModel, index: number) {
         this.filterObject.filters[index] = filter;
-        this.toolsService.filterTools(this.filterObject);
+        this.filterObjectEmitter.emit(this.filterObject);
     }
 }

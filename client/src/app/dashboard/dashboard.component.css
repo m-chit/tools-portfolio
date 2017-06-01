@@ -1,6 +1,7 @@
 .dashboard {
     display: flex;
     width: 100vw;
+    min-width: 430px;
 }
 
 .filters-app {

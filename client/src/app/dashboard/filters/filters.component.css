@@ -1,7 +1,7 @@
 .filter {
     padding: 10px 0 0 0;
     margin: 9vh 0 0 50px;
-    border-right: dashed 5px #d6e7b8;
+    border-right: dashed 1px #d6e7b8;
     display: flex;
     height: 89vh;
     flex-direction: column;

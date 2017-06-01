@@ -1,38 +1,84 @@
-<form
-        class="form-panel"
-        (ngSubmit)="onSubmit()"
-        #f="ngForm">
+<div class="admin-panel">
+    <div class="tool-add">
+        <span class="title-admin">Add new tool</span>
+        <form
+                class="form-panel"
+                (ngSubmit)="onSubmit()"
+                #f="ngForm">
 
-    <input
-            placeholder="Title"
-            name="title"
-            ngModel
-            type="text"
-            class="log-input ">
-    <input
-            placeholder="Details"
-            name="details"
-            ngModel
-            type="text"
-            class="log-input ">
-    <input
-            placeholder="Img"
-            name="img"
-            ngModel
-            type="text"
-            class="log-input ">
-    <input
-            placeholder="Category"
-            name="category"
-            ngModel
-            type="text"
-            class="log-input ">
-    <input
-            placeholder="Tags"
-            name="tags"
-            ngModel
-            type="text"
-            class="log-input ">
+            <input
+                    placeholder="Name"
+                    name="name"
+                    ngModel
+                    type="text"
+                    class="log-input">
+            <textarea
+                    rows="5"
+                    placeholder="Details"
+                    name="details"
+                    ngModel
+                    type="text"
+                    class="log-input">
+            </textarea>
+            <input
+                    placeholder="Img"
+                    name="img"
+                    ngModel
+                    type="text"
+                    class="log-input">
+            <select
+                    placeholder="Category"
+                    name="category"
+                    ngModel
+                    required
+                    type="text"
+                    class="log-input select-class ">
+                <option *ngFor="let categoryName of toolCategoryNames">{{categoryName}}</option>
+            </select>
+            <input
+                    placeholder="Add new category"
+                    name="newCategory"
+                    ngModel
+                    type="text"
+                    class="log-input">
+            <div class="tag-input">
+                <input
+                        placeholder="Tag"
+                        name="tag"
+                        ngModel
+                        required
+                        type="text"
+                        class="log-input">
+                <button required type="button" class="btn btn-success tag-button" (click)="addTags()">Add tag</button>
+            </div>
+            <div class="tags-text">
+        <span *ngFor="let tag of tags" class="tags-text">
+            <button class="tag-remove-button" (click)="removeTag(tag)">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+            {{ tag }}
+        </span>
+            </div>
+            <button type="submit" class="btn btn-success">Add tool!</button>
+        </form>
+    </div>
 
-    <button type="submit" class="btn btn-outline-success">Add tool!</button>
-</form>
+    <div class="tools">
+        <input class="search" type="text" name="search" placeholder="Search..">
+        <div class="tool" *ngFor="let tool of tools">
+            <div>
+                <img class="tool-image" [src]="tool.image" alt=" ">
+                {{tool.name}}
+            </div>
+
+            <div class="right-buttons">
+                <div>
+                    <app-modal-details [Tool]="tool"></app-modal-details>
+                </div>
+                <button class="tag-remove-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <button class="edit-button"><i class="fa fa-paint-brush" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+

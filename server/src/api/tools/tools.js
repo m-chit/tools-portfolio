@@ -12,6 +12,18 @@ const index = {
   }
 };
 
+const create = {
+  method: 'POST',
+  path: '/api/tools',
+  handler: (request, reply) => {
+    const tool = request.payload;
+    Tool.create(tool).then((result) => {
+      reply(result).code(201);
+    });
+  }
+};
+
 module.exports = [
-  index
+  index,
+  create
 ];

@@ -1,4 +1,5 @@
 <div class="dashboard">
-    <app-filters class="filters-app"></app-filters>
-    <app-tools class="tools-app"></app-tools>
+    <app-filters [filterNames]="filterNames" (filterObjectEmitter)="getFilterTools($event)"
+                 class="filters-app"></app-filters>
+    <app-tools [Tools]="toolsToDisplay" class="tools-app"></app-tools>
 </div>

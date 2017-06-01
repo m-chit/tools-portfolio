@@ -2,7 +2,8 @@
     <span class="filter-title">FILTERS</span>
 
     <div *ngFor="let filterName of filterNames; let i = index" class="filter-category">
-        <app-filter (filterChanged)="onFilterChanged($event, i)" [tags]="filterName.tags"
+        <app-filter (filterChanged)="onFilterChanged($event, i)"
+                    [tags]="filterName.tags"
                     [name]="filterName.category"></app-filter>
     </div>
 </div>

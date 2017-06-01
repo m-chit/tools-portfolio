@@ -1,15 +1,170 @@
-.form-panel {
+.admin-panel {
     padding-top: 70px;
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    overflow: auto;
+    margin-left: 50px;
+}
+
+.tool-add {
+    flex-basis: 60%;
+    padding: 0 50px 0 50px;
+    border-right: dashed 1px #d6e7b8;
+}
+
+.tools {
+    flex-basis: 40%;
+    display: flex;
+    align-items: flex-start;
     flex-direction: column;
+    padding: 0 50px 0 50px;
+}
+
+.tool {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 0;
+    justify-content: space-between;
+}
+
+.tool:nth-child(2n+1) {
+    background-color: rgba(200, 200, 200, .1);
+}
+
+.form-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.log-input {
+    margin: 10px 0 10px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 1px #d6e7b8;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .05);
+    outline: 0;
+    background-color: white;
+    color: #494949;
+    width: 100%;
+}
+
+.select-class {
+    height: 45px;
+    cursor: pointer;
+}
+
+.tag-input {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.log-input {
-    width: 50%;
-    margin: 10px;
-    padding: 8px;
-    border-radius: 0;
+.tag-button {
+    margin-left: 20px;
+}
+
+.tags-text {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    color: #999;
+    font-size: .9rem;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+}
+
+.tag-remove-button {
+    background-color: tomato;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    color: white;
+    padding: 0;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 4px;
+    border: none;
+    align-items: center;
+    box-shadow: none;
+}
+
+.tag-remove-button:hover {
+    background-color: indianred;
+}
+
+.edit-button {
+    background-color: dodgerblue;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    color: white;
+    padding: 0;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+}
+
+.edit-button:hover {
+    background-color: royalblue;
+}
+
+.tool-image {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.title-admin {
+    color: #b7e26c;
+    font-family: "Dancing Script";
+    font-size: 30px;
+}
+
+hr {
+    margin: 50px 0 50px 0;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search {
     border: solid 1px #b7e26c;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.search:focus {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 0 #b7e26c;;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
 }
