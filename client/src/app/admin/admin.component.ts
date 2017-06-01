@@ -49,6 +49,9 @@ export class AdminComponent implements OnInit {
                 'category': this.newTool.value.category,
                 'tags': this.tags
             };
+            this.newTool.reset();
+            this.tags = [];
+            this.tools = [...this.tools, tool];
             this.http.post('/api/tools', tool).subscribe(
                 response => console.log(response)
             );
