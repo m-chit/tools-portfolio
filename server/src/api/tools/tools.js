@@ -49,8 +49,35 @@ const destroy = {
   }
 };
 
+const update = {
+  method: 'PUT',
+  path: '/api/tools/{id}',
+  handler: (request, reply) => {
+    const {id} = request.params;
+    const {payload} = request;
+    Tool.findById(id).then((result) => {
+      if (!result) {
+        return reply(Boom.notFound('Object doesn\'t exist'));
+      }
+      const newObject = Object.assign(result, payload);
+
+      newObject.save().then((updatedObject) => {
+        reply(updatedObject);
+      });
+    });
+  },
+  config: {
+    validate: {
+      params: {
+        id: Joi.string().required().hex().length(24)
+      }
+    }
+  }
+};
+
 module.exports = [
   index,
   create,
-  destroy
+  destroy,
+  update
 ];

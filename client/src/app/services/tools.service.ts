@@ -17,6 +17,10 @@ export class ToolsService {
         return this.http.delete('/api/tools/' + id);
     }
 
+    editTool(tool: ToolModel, id: string) {
+        return this.http.put('/api/tools/' + id, tool);
+    }
+
     getCategoryNames(tools: ToolModel[]) {
         const toolCategories = tools.map(tool => tool.category);
         return toolCategories.reduce((acc, categoryName) => {

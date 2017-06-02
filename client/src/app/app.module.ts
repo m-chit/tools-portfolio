@@ -19,6 +19,7 @@ import {AdminComponent} from './admin/admin.component';
 import {FilterComponent} from './dashboard/filters/filter/filter.component';
 import {FiltersComponent} from './dashboard/filters/filters.component';
 import {ToolsComponent} from './dashboard/tools/tools.component';
+import {ModalEditComponent} from './modal-edit/modal-edit.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {ToolsComponent} from './dashboard/tools/tools.component';
         AdminComponent,
         FiltersComponent,
         ToolsComponent,
-        FilterComponent
+        FilterComponent,
+        ModalEditComponent
     ],
     imports: [
         BrowserModule,

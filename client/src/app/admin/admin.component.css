@@ -115,38 +115,11 @@
     background-color: indianred;
 }
 
-.edit-button {
-    background-color: dodgerblue;
-    cursor: pointer;
-    height: 18px;
-    width: 18px;
-    color: white;
-    padding: 0;
-    margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    border-radius: 3px;
-    border: none;
-    box-shadow: none;
-}
-
-.edit-button:hover {
-    background-color: royalblue;
-}
-
 .tool-image {
     margin-right: 8px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-}
-
-.title-admin {
-    color: #b7e26c;
-    font-family: "Dancing Script";
-    font-size: 30px;
 }
 
 .modal {
@@ -178,4 +151,11 @@
     background-color: white;
     padding: 10px;
     width: 100%;
+}
+
+.big-title {
+    color: #393b38;
+    font-size: 1.5rem;
+    font-family: Consolas, monaco, monospace;
+    font-weight: 600;
 }

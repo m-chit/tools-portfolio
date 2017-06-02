@@ -1,32 +1,40 @@
-<div class="admin-panel">
-    <div class="tool-add">
-        <span class="big-title">Add new tool</span>
+<div class="modal-background"
+     *ngIf="hidden === false">
+    <div class="modal-window">
+        <div class="button-right">
+            <button
+                    (click)="hiddenModal()"
+                    class="btn close-button"
+            ><i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <span class="big-title">Edit tool</span>
         <form
                 class="form-panel"
                 (ngSubmit)="onSubmit()"
                 #f="ngForm">
 
             <input
-                    placeholder="Name"
                     name="name"
-                    ngModel
+                    [(ngModel)]="tool.name"
                     type="text"
                     class="log-input">
             <input
                     placeholder="Details"
                     name="details"
-                    ngModel
+                    [(ngModel)]="tool.details"
                     type="text"
                     class="log-input">
             <input
                     placeholder="Image"
                     name="image"
-                    ngModel
+                    [(ngModel)]="tool.image"
                     type="text"
                     class="log-input">
             <select
                     name="category"
-                    ngModel
+                    [(ngModel)]="tool.category"
                     #category
                     type="text"
                     class="log-input select-class ">
@@ -37,8 +45,7 @@
                 <input
                         placeholder="Add new category"
                         name="newCategory"
-                        ngModel
-                        required
+                        [(ngModel)]="tool.category"
                         type="text"
                         class="log-input">
             </div>
@@ -53,38 +60,21 @@
             </div>
             <div class="tags-text">
         <span *ngFor="let tag of tags" class="tags-text">
-            <button class="tag-remove-button" (click)="removeTag(tag)">
+            <button class="close-button" (click)="removeTag(tag)">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
             {{ tag }}
         </span>
             </div>
-            <button type="submit" class="btn btn-success">Add tool!</button>
+            <button type="button" (click)="onSubmit()" class="btn btn-success">Add tool!</button>
         </form>
     </div>
 
-    <div class="tools">
-        <input class="search" type="text" name="search" placeholder="Search..">
-        <div class="scroll">
-            <div class="tool" *ngFor="let tool of tools">
-                <div>
-                    <img class="tool-image" [src]="tool.image" alt=" ">
-                    {{tool.name}} {{tool.category}}
-                </div>
-
-                <div class="right-buttons">
-                    <div>
-                        <app-modal-details [Tool]="tool"></app-modal-details>
-                    </div>
-                    <button class="tag-remove-button"
-                            (click)="deleteTool(tool)">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-
-                    <app-modal-edit [tool]="tool"></app-modal-edit>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
+<div class="button-flex">
+
+    <button (click)="showModal()"
+            class="edit-button">
+        <i class="fa fa-paint-brush" aria-hidden="true"></i></button>
+</div>

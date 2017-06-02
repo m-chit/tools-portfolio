@@ -1,18 +1,20 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ToolModel} from '../models/tool.model';
-import {Http} from '@angular/http';
+import {NgForm} from '@angular/forms';
 import {ToolsService} from '../services/tools.service';
+import {Http} from '@angular/http';
 
 @Component({
-    selector: 'app-admin',
-    templateUrl: './admin.component.html',
-    styleUrls: ['./admin.component.css']
+    selector: 'app-modal-edit',
+    templateUrl: './modal-edit.component.html',
+    styleUrls: ['./modal-edit.component.css']
 })
-export class AdminComponent implements OnInit {
+export class ModalEditComponent implements OnInit {
+    @Input() tool: ToolModel;
+    toolCategoryNames: string[];
     @ViewChild('f') newTool: NgForm;
+    hidden = true;
     tags: string[] = [];
-    toolCategoryNames: string[] = [];
     tools: ToolModel[] = [];
 
     constructor(private http: Http, private toolsService: ToolsService) {
@@ -25,6 +27,15 @@ export class AdminComponent implements OnInit {
                 this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
             }
         );
+        this.tags = this.tool.tags;
+    }
+
+    showModal() {
+        this.hidden = false;
+    }
+
+    hiddenModal() {
+        this.hidden = true;
     }
 
     addTags() {
@@ -35,15 +46,6 @@ export class AdminComponent implements OnInit {
 
     removeTag(tagToRemove: string) {
         this.tags = this.tags.filter(tag => tag !== tagToRemove);
-    }
-
-    deleteTool(tool: ToolModel) {
-        this.toolsService.deleteTool(tool._id).subscribe(
-            (response) => {
-                this.tools = this.tools.filter(toolFilter => toolFilter._id !== tool._id);
-                this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
-            }
-        );
     }
 
     onSubmit() {
@@ -59,10 +61,9 @@ export class AdminComponent implements OnInit {
                     'category': this.newTool.value.category,
                     'tags': this.tags
                 };
-                this.newTool.reset();
-                this.tags = [];
-                this.http.post('/api/tools', tool).subscribe(
+                this.toolsService.editTool(tool, this.tool._id).subscribe(
                     response => {
+                        tool.category = response.json().category;
                         tool._id = response.json()._id;
                         this.tools = [...this.tools, tool];
                         this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
@@ -77,10 +78,9 @@ export class AdminComponent implements OnInit {
                     'category': this.newTool.value.newCategory,
                     'tags': this.tags
                 };
-                this.newTool.reset();
-                this.tags = [];
-                this.http.post('/api/tools', tool).subscribe(
+                this.toolsService.editTool(tool, this.tool._id).subscribe(
                     response => {
+                        tool.category = response.json().category;
                         tool._id = response.json()._id;
                         this.tools = [...this.tools, tool];
                         this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
@@ -91,5 +91,6 @@ export class AdminComponent implements OnInit {
         } else {
             console.log('no name or/and category or/and details');
         }
+        this.hidden = true;
     }
 }
