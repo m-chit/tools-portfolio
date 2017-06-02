@@ -37,6 +37,14 @@ export class AdminComponent implements OnInit {
         this.tags = this.tags.filter(tag => tag !== tagToRemove);
     }
 
+    deleteTool(tool: ToolModel) {
+        this.toolsService.deleteTool(tool._id).subscribe(
+            (response) => {
+                this.tools = this.tools.filter(toolFilter => toolFilter._id !== tool._id);
+            }
+        );
+    }
+
     onSubmit() {
         if (this.newTool.value.name.length !== 0 &&
             this.newTool.value.details !== 0 &&

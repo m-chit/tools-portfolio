@@ -1,4 +1,5 @@
 export class ToolModel {
+    _id?: string;
     name: string;
     details: string;
     image: string;

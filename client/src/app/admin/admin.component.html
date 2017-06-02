@@ -76,7 +76,8 @@
                     <div>
                         <app-modal-details [Tool]="tool"></app-modal-details>
                     </div>
-                    <button class="tag-remove-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    <button class="tag-remove-button" (click)="deleteTool(tool)"><i class="fa fa-times"
+                                                                                    aria-hidden="true"></i></button>
                     <button class="edit-button"><i class="fa fa-paint-brush" aria-hidden="true"></i></button>
                 </div>
             </div>

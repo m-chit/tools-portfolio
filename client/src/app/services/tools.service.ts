@@ -13,6 +13,10 @@ export class ToolsService {
         return this.http.get('/api/tools');
     }
 
+    deleteTool(id: string) {
+        return this.http.delete('/api/tools/' + id);
+    }
+
     getCategoryNames(tools: ToolModel[]) {
         const toolCategories = tools.map(tool => tool.category);
         return toolCategories.reduce((acc, categoryName) => {
