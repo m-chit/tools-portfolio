@@ -38,12 +38,22 @@ const show = {
 const create = {
   method: 'POST',
   path: '/api/tools',
-  handler: (request, reply) => {
-    const tool = request.payload;
-    Tool.create(tool).then((result) => {
-      reply(result).code(201);
-    });
+  config: {
+    handler: (request, reply) => {
+      const tool = request.payload;
+      Tool.create(tool).then((result) => {
+        reply(result).code(201);
+      });
+    },
+    auth: {
+      strategy: 'jwt',
+      access: [{
+        scope: 'admin'
+      }]
+    }
   }
+
+
 };
 
 const destroy = {
@@ -66,6 +76,12 @@ const destroy = {
       params: {
         id: Joi.string().required().hex().length(24)
       }
+    },
+    auth: {
+      strategy: 'jwt',
+      access: [{
+        scope: 'admin'
+      }]
     }
   }
 };
@@ -92,6 +108,12 @@ const update = {
       params: {
         id: Joi.string().required().hex().length(24)
       }
+    },
+    auth: {
+      strategy: 'jwt',
+      access: [{
+        scope: 'admin'
+      }]
     }
   }
 };

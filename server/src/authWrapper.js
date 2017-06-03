@@ -2,12 +2,24 @@
 
 const hapiJwt = require('hapi-auth-jwt2');
 const JWT_SECRET_KEY = require('./secret');
+const User = require('./api/users/users.model');
 
 const register = function register(server, options, next) {
   server.register(hapiJwt);
   server.auth.strategy('jwt', 'jwt',
     {key: JWT_SECRET_KEY,
-      validateFunc: (decoded, request, callback) => callback(null, true), // This should be replaced with a more robust function
+      validateFunc: (decoded, request, callback) => {
+        console.log(decoded);
+        User.findById(decoded.id, '-password').then(
+            (user) => {
+              console.log(user);
+              if (user) {
+                return callback(null, true, {user, 'scope': decoded.scope});
+              }
+              return callback(null, false);
+            }
+        );
+      },
       verifyOptions: {algorithms: ['HS256']}
     });
 

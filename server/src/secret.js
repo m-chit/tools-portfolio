@@ -1,5 +1,5 @@
 'use strict';
 
-const key = 'xddddd';
+const key = 'xDDlolkek';
 
 module.exports = key;

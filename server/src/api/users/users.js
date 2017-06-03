@@ -11,7 +11,6 @@ const verifyCredentials = require('./utils/verify').verifyCredentials;
 const createToken = require('./utils/token');
 
 const hashPassword = function (password, cb) {
-    // Generate a salt at level 10 strength
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(password, salt, (err, hash) => {
       return cb(err, hash);
@@ -62,8 +61,8 @@ const auth = {
             {method: verifyCredentials, assign: 'user'}
     ],
     handler: (req, res) => {
-      console.log(req.payload);
-      res({id_token: createToken(req.payload)}).code(201);
+      console.log(req.pre.user);
+      res({id_token: createToken(req.pre.user)}).code(201);
     },
     validate: {
       payload: authenticateUserSchema
