@@ -1,4 +1,6 @@
 <div *ngIf="isHidden === false" class="modal-shell">
-    <button class="button-x" (click)="closeModal()"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="button-right">
+        <button class="button-x" (click)="closeModal()"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
     <div class="text-area">{{ text }}</div>
 </div>

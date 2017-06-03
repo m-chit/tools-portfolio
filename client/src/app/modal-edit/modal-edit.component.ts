@@ -76,7 +76,7 @@ export class ModalEditComponent implements OnInit {
                 }
             );
         } else {
-            this.alertService.showModal('Tool was not added, please fill name, details and category fields!');
+            this.alertService.showModal('Tool was not edited, please fill name, details and category fields!');
         }
     }
 }

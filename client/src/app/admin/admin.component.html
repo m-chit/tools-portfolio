@@ -9,25 +9,25 @@
             <input
                     placeholder="Name"
                     name="name"
-                    ngModel
+                    [(ngModel)]="addedTool.name"
                     type="text"
                     class="log-input">
 
             <input
                     placeholder="Details"
                     name="details"
-                    ngModel
+                    [(ngModel)]="addedTool.details"
                     type="text"
                     class="log-input">
             <input
                     placeholder="Image"
                     name="image"
-                    ngModel
+                    [(ngModel)]="addedTool.image"
                     type="text"
                     class="log-input">
             <select
                     name="category"
-                    ngModel
+                    [(ngModel)]="addedTool.category"
                     #category
                     type="text"
                     class="log-input select-class ">
@@ -38,7 +38,7 @@
                 <input
                         placeholder="Add new category"
                         name="newCategory"
-                        ngModel
+                        [(ngModel)]="newCategory"
                         required
                         type="text"
                         class="log-input">
@@ -47,13 +47,13 @@
                 <input
                         placeholder="Tag"
                         name="tag"
-                        ngModel
+                        [(ngModel)]="newTag"
                         type="text"
                         class="log-input">
                 <button type="button" class="btn btn-success tag-button" (click)="addTags()">Add new tag</button>
             </div>
             <div class="tags-text">
-        <span *ngFor="let tag of tags" class="tags-text">
+        <span *ngFor="let tag of addedTool.tags" class="tags-text">
             <button class="tag-remove-button" (click)="removeTag(tag)">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>

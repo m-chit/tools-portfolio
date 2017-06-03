@@ -9,6 +9,7 @@
     color: white;
     padding: 10px;
     animation: modal 1s ease-out;
+    z-index: 3;
 }
 
 @keyframes modal {
@@ -19,11 +20,15 @@
         right: 10px;
     }
 }
-
+.button-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 .button-x {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     color: white;
     width: 18px;
     height: 18px;

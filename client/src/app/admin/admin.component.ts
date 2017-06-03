@@ -15,11 +15,15 @@ export class AdminComponent implements OnInit {
     tags: string[] = [];
     toolCategoryNames: string[] = [];
     tools: ToolModel[] = [];
+    addedTool: ToolModel;
+    newCategory: string;
+    newTag: string;
 
     constructor(private http: Http, private toolsService: ToolsService, private alertService: AlertService) {
     }
 
     ngOnInit() {
+        this.addedTool = new ToolModel('', '' , '' , false , 'Add category...', []);
         this.toolsService.getTools().subscribe(
             (response) => {
                 this.tools = response.json();
@@ -29,13 +33,13 @@ export class AdminComponent implements OnInit {
     }
 
     addTags() {
-        if (this.newTool.value.tag !== '' && !this.tags.includes(this.newTool.value.tag)) {
-            this.tags = [...this.tags, this.newTool.value.tag];
+        if (this.newTag !== '' && !this.addedTool.tags.includes(this.newTag)) {
+            this.addedTool.tags = [...this.addedTool.tags, this.newTag];
         }
     }
 
     removeTag(tagToRemove: string) {
-        this.tags = this.tags.filter(tag => tag !== tagToRemove);
+        this.addedTool.tags = this.addedTool.tags.filter(tag => tag !== tagToRemove);
     }
 
     deleteTool(tool: ToolModel) {
@@ -53,50 +57,36 @@ export class AdminComponent implements OnInit {
         this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
     }
 
-    onSubmit() {
-        if (this.newTool.value.name.length !== 0 &&
-            this.newTool.value.details.length !== 0) {
-            if (this.newTool.value.category.length !== 0 &&
-                this.newTool.value.category !== 'Add category...') {
-                const tool: ToolModel = {
-                    'name': this.newTool.value.name,
-                    'details': this.newTool.value.details,
-                    'image': this.newTool.value.image,
-                    'favorite': false,
-                    'category': this.newTool.value.category,
-                    'tags': this.tags
-                };
-                this.newTool.reset();
-                this.tags = [];
-                this.http.post('/api/tools', tool).subscribe(
-                    response => {
-                        tool._id = response.json()._id;
-                        this.tools = [...this.tools, tool];
-                        this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
-                        this.alertService.showModal('Added new tool!');
-                    }
-                );
-            } else if (this.newTool.value.newCategory.length !== 0) {
-                const tool: ToolModel = {
-                    'name': this.newTool.value.name,
-                    'details': this.newTool.value.details,
-                    'image': this.newTool.value.image,
-                    'favorite': false,
-                    'category': this.newTool.value.newCategory,
-                    'tags': this.tags
-                };
-                this.newTool.reset();
-                this.tags = [];
-                this.http.post('/api/tools', tool).subscribe(
-                    response => {
-                        tool._id = response.json()._id;
-                        this.tools = [...this.tools, tool];
-                        this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
-                        this.alertService.showModal('Added new tool!');
-                    }
-                );
-            }
+    hasNewCategory() {
+        return !(this.addedTool.category.length !== 0 && this.addedTool.category !== 'Add category...');
+    }
 
+    isFormCorrect() {
+        return this.addedTool.name.length !== 0 &&
+            this.addedTool.details.length !== 0 &&
+            this.addedTool.category.length !== 0;
+    }
+
+    clearForm() {
+        this.addedTool = new ToolModel('', '' , '' , false , 'Add category...', []);
+        this.newCategory = '';
+        this.newTag = '';
+    }
+
+    onSubmit() {
+        if (this.hasNewCategory()) {
+            this.addedTool.category = this.newCategory;
+        }
+        if (this.isFormCorrect()) {
+            this.http.post('/api/tools', this.addedTool).subscribe(
+                response => {
+                    this.addedTool._id = response.json()._id;
+                    this.tools = [...this.tools, this.addedTool];
+                    this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
+                    this.alertService.showModal('Added new tool: ' + this.addedTool.name);
+                    this.clearForm();
+                }
+            );
         } else {
             this.alertService.showModal('Tool was not added, please fill name, details and category fields!');
         }
