@@ -64,7 +64,7 @@
 }
 
 .buttons-design {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, .5);
     color: #4b8d2b;
     font-family: Consolas, monaco, monospace;
     font-size: 1rem;

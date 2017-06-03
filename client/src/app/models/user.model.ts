@@ -6,12 +6,11 @@ export class UserModel {
     email: string;
     image?: string;
     password: string;
-    favorites: ToolModel[];
+    favorites?: ToolModel[];
 
     constructor(username: string, email: string, password: string) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.favorites = [];
     }
 }

@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import {Router} from '@angular/router';
+import {UserModel} from '../models/user.model';
 
 @Injectable()
 export class AuthService {
@@ -11,8 +12,8 @@ export class AuthService {
         return this.http.post('/api/users/authenticateUser', body);
     }
 
-    signUp() {
-
+    signUp(user: UserModel) {
+        return this.http.post('/api/users', user);
     }
 
     logOut() {

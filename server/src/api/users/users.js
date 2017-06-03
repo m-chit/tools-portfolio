@@ -24,12 +24,10 @@ const create = {
   path: '/api/users',
   config: {
     auth: false,
-        // Before the route handler runs, verify that the user is unique
     pre: [
             {method: verifyUniqueUser}
     ],
     handler: (req, res) => {
-
       const user = new User();
       user.email = req.payload.email;
       user.username = req.payload.username;
