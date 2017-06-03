@@ -61,7 +61,6 @@ const auth = {
             {method: verifyCredentials, assign: 'user'}
     ],
     handler: (req, res) => {
-      console.log(req.pre.user);
       res({id_token: createToken(req.pre.user)}).code(201);
     },
     validate: {
@@ -70,8 +69,16 @@ const auth = {
   }
 };
 
+const user = {
+  method: 'GET',
+  path: '/api/users',
+  handler: (req, res) => {
+    res(req.auth.credentials.user);
+  }
+};
 
 module.exports = [
   create,
-  auth
+  auth,
+  user
 ];

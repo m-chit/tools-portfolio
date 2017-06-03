@@ -1,15 +1,23 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../services/auth.service';
+import {Http} from '@angular/http';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
     dropdownShow = false;
+    isAdmin = false;
+    constructor(private authService: AuthService, private http: Http) {
+    }
 
-    constructor(private authService: AuthService) {
+    ngOnInit() {
+        const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
+        this.http.get('/api/users' + token).subscribe(
+            response => this.isAdmin = response.json().admin
+        );
     }
 
     DropdownShow() {

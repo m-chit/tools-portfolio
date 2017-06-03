@@ -25,6 +25,8 @@ import {AlertService} from './services/alert.service';
 import {SignUpComponent} from './landing-page/sign-up/sign-up.component';
 import {SignInComponent} from './landing-page/sign-in/sign-in.component';
 import {AuthService} from './services/auth.service';
+import {AuthGuardianService} from './services/auth.guardian.service';
+import {AdminGuardianService} from './services/admin.guardian.service';
 
 
 @NgModule({
@@ -54,7 +56,7 @@ import {AuthService} from './services/auth.service';
         HttpModule,
         AppRoutingModule
     ],
-    providers: [ToolsService, AlertService, AuthService],
+    providers: [ToolsService, AlertService, AuthService, AuthGuardianService, AdminGuardianService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

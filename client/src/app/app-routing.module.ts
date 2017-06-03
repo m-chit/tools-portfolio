@@ -8,6 +8,8 @@ import {MainComponent} from './main/main.component';
 import {AdminComponent} from './admin/admin.component';
 import {SignUpComponent} from './landing-page/sign-up/sign-up.component';
 import {SignInComponent} from './landing-page/sign-in/sign-in.component';
+import {AdminGuardianService} from './services/admin.guardian.service';
+import {AuthGuardianService} from './services/auth.guardian.service';
 
 const appRoutes: Routes = [
     {
@@ -17,9 +19,9 @@ const appRoutes: Routes = [
     ]
     },
     {
-        path: '', component: MainComponent, children: [
-        {path: '', component: DashboardComponent},
-        {path: 'admin', component: AdminComponent}
+        path: '', component: MainComponent, canActivate: [AuthGuardianService], children: [
+        {path: '', component: DashboardComponent, canActivate: [AuthGuardianService]},
+        {path: 'admin', component: AdminComponent, canActivate: [AdminGuardianService]}
     ]
     },
     {path: 'not-found', component: NotFoundComponent},

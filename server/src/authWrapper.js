@@ -9,10 +9,8 @@ const register = function register(server, options, next) {
   server.auth.strategy('jwt', 'jwt',
     {key: JWT_SECRET_KEY,
       validateFunc: (decoded, request, callback) => {
-        console.log(decoded);
         User.findById(decoded.id, '-password').then(
             (user) => {
-              console.log(user);
               if (user) {
                 return callback(null, true, {user, 'scope': decoded.scope});
               }
