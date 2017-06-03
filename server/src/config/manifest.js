@@ -30,5 +30,10 @@ module.exports = {
         }
       }
     }
+  },
+  {
+    plugin: {
+      register: './authWrapper'
+    }
   }]
 };

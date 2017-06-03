@@ -2,27 +2,37 @@ import {Injectable} from '@angular/core';
 import {ToolModel} from '../models/tool.model';
 import {FilterModel} from '../models/filter.model';
 import {Http} from '@angular/http';
+import {AuthService} from './auth.service';
 
 @Injectable()
 export class ToolsService {
 
-    constructor(private http: Http) {
+    constructor(private http: Http, private authService: AuthService) {
     }
 
     getTools() {
-        return this.http.get('/api/tools');
+        const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.get('/api/tools' + token);
     }
 
     getTool(id: string) {
-        return this.http.get('/api/tools/' + id);
+        const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.get('/api/tools/' + id + token);
+    }
+
+    addTool(tool: ToolModel) {
+        const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.post('/api/tools' + token, tool);
     }
 
     deleteTool(id: string) {
-        return this.http.delete('/api/tools/' + id);
+        const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.delete('/api/tools/' + id + token);
     }
 
     editTool(tool: ToolModel, id: string) {
-        return this.http.put('/api/tools/' + id, tool);
+        const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.put('/api/tools/' + id + token, tool);
     }
 
     getCategoryNames(tools: ToolModel[]) {

@@ -1,6 +1,7 @@
 'use strict';
 
 const ToolSeed = require('./tools');
+const UserSeed = require('./users');
 const Config = require('../config/config');
 
 module.exports = () => {
@@ -8,7 +9,8 @@ module.exports = () => {
     return Promise.resolve();
   }
   const seeds = [
-    ToolSeed()
+    ToolSeed(),
+    UserSeed()
   ];
 
   return Promise.all(seeds).then(() => {

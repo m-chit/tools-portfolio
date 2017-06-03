@@ -1,19 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
+import {NgForm} from '@angular/forms';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+    selector: 'app-sign-in',
+    templateUrl: './sign-in.component.html',
+    styleUrls: ['./sign-in.component.css']
 })
-export class SignInComponent implements OnInit {
+export class SignInComponent {
+    @ViewChild('f') form: NgForm;
 
-  constructor(private router: Router) {
-  }
+    constructor(private authService: AuthService, private router: Router) {
+    }
 
-  ngOnInit() {
-  }
-  onSubmit() {
-    this.router.navigate(['/']);
-  }
+    onSubmit() {
+        const body = {
+            'usernameOrEmail': this.form.value.usernameOrEmail,
+            'password': this.form.value.password
+        };
+        this.authService.signIn(body).subscribe(
+            response => {
+                const token = response.json().id_token;
+                localStorage.setItem('token', token);
+                this.router.navigate(['/']);
+            }
+        );
+    }
 }

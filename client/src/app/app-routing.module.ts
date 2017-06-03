@@ -10,10 +10,12 @@ import {SignUpComponent} from './landing-page/sign-up/sign-up.component';
 import {SignInComponent} from './landing-page/sign-in/sign-in.component';
 
 const appRoutes: Routes = [
-    {path: 'landing', component: LandingPageComponent, children: [
+    {
+        path: 'landing', component: LandingPageComponent, children: [
         {path: 'register', component: SignUpComponent},
         {path: '', component: SignInComponent},
-    ]},
+    ]
+    },
     {
         path: '', component: MainComponent, children: [
         {path: '', component: DashboardComponent},

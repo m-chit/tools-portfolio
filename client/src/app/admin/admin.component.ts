@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ToolModel} from '../models/tool.model';
-import {Http} from '@angular/http';
 import {ToolsService} from '../services/tools.service';
 import {AlertService} from '../services/alert.service';
 
@@ -19,7 +18,7 @@ export class AdminComponent implements OnInit {
     newCategory: string;
     newTag: string;
 
-    constructor(private http: Http, private toolsService: ToolsService, private alertService: AlertService) {
+    constructor(private toolsService: ToolsService, private alertService: AlertService) {
     }
 
     ngOnInit() {
@@ -78,7 +77,7 @@ export class AdminComponent implements OnInit {
             this.addedTool.category = this.newCategory;
         }
         if (this.isFormCorrect()) {
-            this.http.post('/api/tools', this.addedTool).subscribe(
+            this.toolsService.addTool(this.addedTool).subscribe(
                 response => {
                     this.addedTool._id = response.json()._id;
                     this.tools = [...this.tools, this.addedTool];

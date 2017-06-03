@@ -22,8 +22,9 @@ import {ToolsComponent} from './dashboard/tools/tools.component';
 import {ModalEditComponent} from './modal-edit/modal-edit.component';
 import {ModalAlertComponent} from './modal-alert/modal-alert.component';
 import {AlertService} from './services/alert.service';
-import { SignUpComponent } from './landing-page/sign-up/sign-up.component';
-import { SignInComponent } from './landing-page/sign-in/sign-in.component';
+import {SignUpComponent} from './landing-page/sign-up/sign-up.component';
+import {SignInComponent} from './landing-page/sign-in/sign-in.component';
+import {AuthService} from './services/auth.service';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { SignInComponent } from './landing-page/sign-in/sign-in.component';
         HttpModule,
         AppRoutingModule
     ],
-    providers: [ToolsService, AlertService],
+    providers: [ToolsService, AlertService, AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

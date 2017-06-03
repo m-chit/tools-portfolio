@@ -1,8 +1,11 @@
 <div class="background">
-    <div class="panel">
     <h1 class="title-log"> Tools Manager</h1>
-    <button class="btn btn-success" [routerLink]="['/landing']">Login</button>
-    <button class="btn btn-success" [routerLink]="['/landing', 'register']">Register</button>
-    <router-outlet></router-outlet>
+    <div class="panel">
+
+        <div class="buttons btn-group">
+            <button class="btn buttons-design" [routerLink]="['/landing']">Login</button>
+            <button class="btn buttons-design" [routerLink]="['/landing', 'register']">Register</button>
+        </div>
+        <router-outlet></router-outlet>
     </div>
 </div>
