@@ -12,6 +12,7 @@
                     ngModel
                     type="text"
                     class="log-input">
+
             <input
                     placeholder="Details"
                     name="details"
@@ -66,10 +67,10 @@
     <div class="tools">
         <input class="search" type="text" name="search" placeholder="Search..">
         <div class="scroll">
-            <div class="tool" *ngFor="let tool of tools">
+            <div class="tool" *ngFor="let tool of tools; let i=index">
                 <div>
                     <img class="tool-image" [src]="tool.image" alt=" ">
-                    {{tool.name}} {{tool.category}}
+                    {{tool.name}}
                 </div>
 
                 <div class="right-buttons">
@@ -81,7 +82,8 @@
                         <i class="fa fa-times" aria-hidden="true"></i>
                     </button>
 
-                    <app-modal-edit [tool]="tool"></app-modal-edit>
+                    <app-modal-edit [tool]="tool" [toolCategoryNames]="toolCategoryNames"
+                                    (toolEdited)="toolEdited($event, i)"></app-modal-edit>
                 </div>
             </div>
         </div>

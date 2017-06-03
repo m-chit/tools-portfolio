@@ -46,6 +46,11 @@ export class AdminComponent implements OnInit {
         );
     }
 
+    toolEdited(tool: ToolModel, index: number) {
+        this.tools[index] = tool;
+        this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
+    }
+
     onSubmit() {
         if (this.newTool.value.name.length !== 0 &&
             this.newTool.value.details.length !== 0) {
@@ -88,8 +93,6 @@ export class AdminComponent implements OnInit {
                 );
             }
 
-        } else {
-            console.log('no name or/and category or/and details');
         }
     }
 }

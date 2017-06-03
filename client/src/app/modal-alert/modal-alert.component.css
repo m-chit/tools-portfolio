@@ -1,0 +1,43 @@
+.modal-shell {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, .7);
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    animation: modal 1s ease-out;
+}
+
+@keyframes modal {
+    0% {
+        right: -300px
+    }
+    100% {
+        right: 10px;
+    }
+}
+
+.button-x {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.button-x:hover {
+    color: tomato;
+    outline: none;
+}
+
+.text-area {
+    overflow: auto;
+    height: 80px;
+}

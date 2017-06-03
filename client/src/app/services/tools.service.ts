@@ -13,6 +13,10 @@ export class ToolsService {
         return this.http.get('/api/tools');
     }
 
+    getTool(id: string) {
+        return this.http.get('/api/tools/' + id);
+    }
+
     deleteTool(id: string) {
         return this.http.delete('/api/tools/' + id);
     }

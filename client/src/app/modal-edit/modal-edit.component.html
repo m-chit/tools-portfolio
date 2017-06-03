@@ -3,7 +3,7 @@
     <div class="modal-window">
         <div class="button-right">
             <button
-                    (click)="hiddenModal()"
+                    (click)="hideModal()"
                     class="btn close-button"
             ><i class="fa fa-times" aria-hidden="true"></i>
             </button>
@@ -17,24 +17,24 @@
 
             <input
                     name="name"
-                    [(ngModel)]="tool.name"
+                    [(ngModel)]="toolToEdit.name"
                     type="text"
                     class="log-input">
             <input
                     placeholder="Details"
                     name="details"
-                    [(ngModel)]="tool.details"
+                    [(ngModel)]="toolToEdit.details"
                     type="text"
                     class="log-input">
             <input
                     placeholder="Image"
                     name="image"
-                    [(ngModel)]="tool.image"
+                    [(ngModel)]="toolToEdit.image"
                     type="text"
                     class="log-input">
             <select
                     name="category"
-                    [(ngModel)]="tool.category"
+                    [(ngModel)]="toolToEdit.category"
                     #category
                     type="text"
                     class="log-input select-class ">
@@ -45,7 +45,7 @@
                 <input
                         placeholder="Add new category"
                         name="newCategory"
-                        [(ngModel)]="tool.category"
+                        [(ngModel)]="newCategory"
                         type="text"
                         class="log-input">
             </div>
@@ -59,7 +59,7 @@
                 <button type="button" class="btn btn-success tag-button" (click)="addTags()">Add new tag</button>
             </div>
             <div class="tags-text">
-        <span *ngFor="let tag of tags" class="tags-text">
+        <span *ngFor="let tag of toolToEdit.tags" class="tags-text">
             <button class="close-button" (click)="removeTag(tag)">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>

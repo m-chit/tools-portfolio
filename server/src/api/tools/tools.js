@@ -14,6 +14,27 @@ const index = {
   }
 };
 
+const show = {
+  method: 'GET',
+  path: '/api/tools/{id}',
+  handler: (request, reply) => {
+    const {id} = request.params;
+    Tool.findById(id).then((result) => {
+      if (!result) {
+        return reply(Boom.notFound('Object doesn\'t exist'));
+      }
+      reply(result);
+    });
+  },
+  config: {
+    validate: {
+      params: {
+        id: Joi.string().required().hex().length(24)
+      }
+    }
+  }
+};
+
 const create = {
   method: 'POST',
   path: '/api/tools',
@@ -77,6 +98,7 @@ const update = {
 
 module.exports = [
   index,
+  show,
   create,
   destroy,
   update

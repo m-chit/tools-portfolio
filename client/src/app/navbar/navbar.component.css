@@ -11,6 +11,7 @@
     padding: 0 20px 0 20px;
     border: none;
 }
+
 .navbar-shell-small {
     position: fixed;
     top: 0;
@@ -28,6 +29,7 @@
     .navbar-shell-big {
         display: none;
     }
+
     .navbar-shell-small {
         display: flex;
     }
@@ -50,6 +52,7 @@
 .dropdown-small {
     width: 100vw;
 }
+
 .my-dropdown {
     cursor: pointer;
     color: #eef3ef;
