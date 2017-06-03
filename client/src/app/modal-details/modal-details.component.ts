@@ -10,13 +10,11 @@ export class ModalDetailsComponent {
     @Input('Tool') tool: ToolModel;
     hidden = true;
 
-    showModal() {
+    showModalDetails() {
         this.hidden = false;
     }
 
     hiddenModal() {
         this.hidden = true;
     }
-
-
 }

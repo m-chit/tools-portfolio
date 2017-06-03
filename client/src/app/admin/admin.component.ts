@@ -3,6 +3,7 @@ import {NgForm} from '@angular/forms';
 import {ToolModel} from '../models/tool.model';
 import {Http} from '@angular/http';
 import {ToolsService} from '../services/tools.service';
+import {AlertService} from '../services/alert.service';
 
 @Component({
     selector: 'app-admin',
@@ -15,7 +16,7 @@ export class AdminComponent implements OnInit {
     toolCategoryNames: string[] = [];
     tools: ToolModel[] = [];
 
-    constructor(private http: Http, private toolsService: ToolsService) {
+    constructor(private http: Http, private toolsService: ToolsService, private alertService: AlertService) {
     }
 
     ngOnInit() {
@@ -42,6 +43,7 @@ export class AdminComponent implements OnInit {
             (response) => {
                 this.tools = this.tools.filter(toolFilter => toolFilter._id !== tool._id);
                 this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
+                this.alertService.showModal('Deleted tool!');
             }
         );
     }
@@ -71,6 +73,7 @@ export class AdminComponent implements OnInit {
                         tool._id = response.json()._id;
                         this.tools = [...this.tools, tool];
                         this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
+                        this.alertService.showModal('Added new tool!');
                     }
                 );
             } else if (this.newTool.value.newCategory.length !== 0) {
@@ -89,10 +92,13 @@ export class AdminComponent implements OnInit {
                         tool._id = response.json()._id;
                         this.tools = [...this.tools, tool];
                         this.toolCategoryNames = this.toolsService.getCategoryNames(this.tools);
+                        this.alertService.showModal('Added new tool!');
                     }
                 );
             }
 
+        } else {
+            this.alertService.showModal('Tool was not added, please fill name, details and category fields!');
         }
     }
 }

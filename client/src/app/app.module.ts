@@ -21,6 +21,7 @@ import {FiltersComponent} from './dashboard/filters/filters.component';
 import {ToolsComponent} from './dashboard/tools/tools.component';
 import {ModalEditComponent} from './modal-edit/modal-edit.component';
 import {ModalAlertComponent} from './modal-alert/modal-alert.component';
+import {AlertService} from './services/alert.service';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import {ModalAlertComponent} from './modal-alert/modal-alert.component';
         HttpModule,
         AppRoutingModule
     ],
-    providers: [ToolsService],
+    providers: [ToolsService, AlertService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

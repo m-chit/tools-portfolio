@@ -3,6 +3,7 @@ import {ToolModel} from '../models/tool.model';
 import {NgForm} from '@angular/forms';
 import {ToolsService} from '../services/tools.service';
 import {Http} from '@angular/http';
+import {AlertService} from '../services/alert.service';
 
 @Component({
     selector: 'app-modal-edit',
@@ -17,15 +18,16 @@ export class ModalEditComponent implements OnInit {
     toolToEdit: ToolModel;
     newCategory: string;
     hidden = true;
+    text: string;
 
-    constructor(private toolsService: ToolsService) {
+    constructor(private toolsService: ToolsService, private alertService: AlertService) {
     }
 
     ngOnInit() {
         this.toolToEdit = this.tool;
     }
 
-    showModal() {
+    showModalEdit() {
         this.toolsService.getTool(this.tool._id).subscribe(
             response => this.toolToEdit = response.json(),
             error => console.log(error)
@@ -67,9 +69,14 @@ export class ModalEditComponent implements OnInit {
                 response => {
                     this.tool = this.toolToEdit;
                     this.toolEdited.emit(this.tool);
+                    this.alertService.showModal('Edited tool!');
                     this.hideModal();
+
+
                 }
             );
+        } else {
+            this.alertService.showModal('Tool was not added, please fill name, details and category fields!');
         }
     }
 }

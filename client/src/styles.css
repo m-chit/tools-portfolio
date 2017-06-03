@@ -9,6 +9,7 @@
         overflow: scroll;
     }
 }
+
 ::-moz-selection {
     background: #d6e7b8;
 }
