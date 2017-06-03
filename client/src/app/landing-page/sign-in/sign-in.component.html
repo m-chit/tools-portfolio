@@ -1,0 +1,33 @@
+<div class="panel">
+    <form
+            class="form-panel"
+            (ngSubmit)="onSubmit()"
+            #f="ngForm">
+
+      <div class="btn-group log-input-first">
+        <span class="icon-left">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </span>
+        <input
+                placeholder="Username"
+                name="username"
+                ngModel
+                type="username"
+                class="log-input ">
+
+</div>
+      <div class="btn-group">
+        <span class="icon-left">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        </span>
+        <input
+                placeholder="Password"
+                name="password"
+                ngModel
+                type="password"
+                class="log-input">
+      </div>
+
+      <button type="submit" class="btn log-button">Log in</button>
+    </form>
+</div>

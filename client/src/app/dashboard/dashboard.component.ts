@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
         );
     }
 
-    getFilterTools(filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] }) {
+    getFilterTools(filterObject: { filterFav: boolean, filters: FilterModel[] }) {
         this.toolsToDisplay = this.toolsService.filterTools(this.tools, filterObject);
     }
 }

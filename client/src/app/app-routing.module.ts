@@ -6,9 +6,14 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {MainComponent} from './main/main.component';
 import {AdminComponent} from './admin/admin.component';
+import {SignUpComponent} from './landing-page/sign-up/sign-up.component';
+import {SignInComponent} from './landing-page/sign-in/sign-in.component';
 
 const appRoutes: Routes = [
-    {path: 'landing', component: LandingPageComponent},
+    {path: 'landing', component: LandingPageComponent, children: [
+        {path: 'register', component: SignUpComponent},
+        {path: '', component: SignInComponent},
+    ]},
     {
         path: '', component: MainComponent, children: [
         {path: '', component: DashboardComponent},

@@ -1,5 +1,11 @@
 <div class="filter">
+    <input class="search" type="text" name="search" placeholder="Search...">
+    <div class="filter-fav">
+        <app-checkbox (checkboxChange)="onFavoritesChanged($event)"></app-checkbox>
+        Favorite
+    </div>
     <span class="filter-title">FILTERS</span>
+
 
     <div *ngFor="let filterName of filterNames; let i = index" class="filter-category">
         <app-filter (filterChanged)="onFilterChanged($event, i)"

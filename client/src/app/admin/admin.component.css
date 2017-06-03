@@ -135,20 +135,19 @@
 }
 
 .search {
-    border: solid 1px #b7e26c;
+    border: solid 1px #eee;
     padding: 10px;
     border-radius: 5px;
     width: 100%;
+    outline: none;
     margin-bottom: 10px;
 }
 
 .search:focus {
-    border: none;
-    border-radius: 0;
-    box-shadow: 0 2px 0 #b7e26c;;
+    border: solid 1px #b7e26c;
     background-color: white;
     padding: 10px;
-    width: 100%;
+    outline: none;
 }
 
 .big-title {

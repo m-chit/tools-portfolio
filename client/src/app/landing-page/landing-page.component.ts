@@ -13,4 +13,7 @@ export class LandingPageComponent {
     onSubmit() {
         this.router.navigate(['/']);
     }
+
+
+
 }

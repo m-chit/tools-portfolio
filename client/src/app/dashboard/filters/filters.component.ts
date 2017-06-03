@@ -15,6 +15,11 @@ export class FiltersComponent {
         this.filterObject = {filterFav: false, favStatus: false, filters: []};
     }
 
+    onFavoritesChanged(filterFav: boolean) {
+        this.filterObject.filterFav = filterFav;
+        this.filterObjectEmitter.emit(this.filterObject);
+    }
+
     onFilterChanged(filter: FilterModel, index: number) {
         this.filterObject.filters[index] = filter;
         this.filterObjectEmitter.emit(this.filterObject);

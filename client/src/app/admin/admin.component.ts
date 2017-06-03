@@ -23,7 +23,7 @@ export class AdminComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.addedTool = new ToolModel('', '' , '' , false , 'Add category...', []);
+        this.addedTool = new ToolModel('', '', '', false, 'Add category...', []);
         this.toolsService.getTools().subscribe(
             (response) => {
                 this.tools = response.json();
@@ -68,7 +68,7 @@ export class AdminComponent implements OnInit {
     }
 
     clearForm() {
-        this.addedTool = new ToolModel('', '' , '' , false , 'Add category...', []);
+        this.addedTool = new ToolModel('', '', '', false, 'Add category...', []);
         this.newCategory = '';
         this.newTag = '';
     }
