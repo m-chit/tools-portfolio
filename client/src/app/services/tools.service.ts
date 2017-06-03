@@ -49,11 +49,11 @@ export class ToolsService {
     }
 
 
-    filterTools(tools: ToolModel[], filterObject: { filterFav: boolean, favStatus: boolean, filters: FilterModel[] }) {
+    filterTools(tools: ToolModel[], filterObject: { filterFav: boolean, filters: FilterModel[] }) {
         const clearedFilters = filterObject.filters.filter(filter => filter !== undefined && filter.category !== '');
         let toolsToDisplay = tools;
         if (filterObject.filterFav) {
-            toolsToDisplay = toolsToDisplay.filter(tool => tool.favorite === filterObject.favStatus);
+            toolsToDisplay = toolsToDisplay.filter(tool => tool.favorite);
         }
         if (clearedFilters.length !== 0) {
             toolsToDisplay = toolsToDisplay.filter(tool => {

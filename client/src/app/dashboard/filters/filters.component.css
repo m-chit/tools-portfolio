@@ -12,9 +12,19 @@
 .filter-title {
     color: #393b38;
     font-size: 2rem;
-    margin-top: 50px;
     font-family: Consolas, monaco, monospace;
     font-weight: 600;
+}
+
+.filter-fav {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px 0 5px 25px;
+    font-family: Consolas, monaco, monospace;
+    font-size: 1rem;
+    color: #393b38;
+
 }
 
 .filter-category {
@@ -38,4 +48,19 @@
         height: auto;
         align-items: center;
     }
+}
+
+.search {
+    border: solid 1px #eee;
+    padding: 10px;
+    border-radius: 5px;
+    width: 93%;
+    outline: none;
+}
+
+.search:focus {
+    border: solid 1px #b7e26c;
+    background-color: white;
+    padding: 10px;
+    outline: none;
 }
