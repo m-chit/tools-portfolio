@@ -60,8 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
-    width: 20px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -71,12 +70,12 @@
 }
 
 .heart-button-no {
-    background-color: #d6d2d3;
-    color: #fff;
+    background-color: transparent;
+    color: #91c33c;
 }
 
 .heart-button-active {
-    background-color: #eff3ee;
+    background-color: transparent;
     color: #91c33c;
 }
 

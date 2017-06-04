@@ -7,7 +7,8 @@ import {Observable} from 'rxjs/Rx';
 @Injectable()
 export class AuthGuardianService implements CanActivate {
 
-    constructor(private http: Http, private authService: AuthService, private router: Router) {}
+    constructor(private http: Http, private authService: AuthService, private router: Router) {
+    }
 
     canActivate() {
         const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';

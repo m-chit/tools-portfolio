@@ -10,6 +10,7 @@ import {Http} from '@angular/http';
 export class NavbarComponent implements OnInit {
     dropdownShow = false;
     isAdmin = false;
+
     constructor(private authService: AuthService, private http: Http) {
     }
 
