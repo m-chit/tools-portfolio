@@ -136,3 +136,7 @@ div > button {
     font-family: Consolas, monaco, monospace;
     font-weight: 600;
 }
+
+.pointer-button {
+    cursor: pointer;
+}

@@ -22,16 +22,15 @@
             <button class="my-dropdown"><i class="fa fa-bars" aria-hidden="true"></i>
             </button>
             <div class="dropdown-content">
-                <a class="link dropdown-item" [routerLink]="['/']">
+                <a class="dropdown-item hamburger " [routerLink]="['/']">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     HOME</a>
-                <a *ngIf="isAdmin" class="link dropdown-item" [routerLink]="['/admin']">
+                <a *ngIf="isAdmin" class=" dropdown-item hamburger" [routerLink]="['/admin']">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     ADMIN</a>
-                <a class="link dropdown-item" type="button" (click)="logOut()">
+                <a id="log-out" class="ropdown-item hamburger" (click)="logOut()">
                     <i class="fa fa-power-off" aria-hidden="true"></i>
-                    LOG OUT
-                </a>
+                    LOG OUT</a>
             </div>
         </div>
     </div>

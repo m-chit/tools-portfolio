@@ -4,7 +4,7 @@
     justify-content: space-between;
     height: 400px;
     width: 365px;
-    margin: 25px 10px 25px 10px;
+    margin: 0 10px 50px 10px;
     border: solid .1rem #f4f4f4;
     border-left: solid 1rem #b7e26c;
     border-top-left-radius: 20px;
@@ -29,8 +29,8 @@
 
 .buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .tool-image {
@@ -65,12 +65,32 @@
     color: #585858;
     font-size: .9rem;
 }
-
 .heart-button {
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     border: none;
-    font-size: 1.3rem;
     outline: none;
-    color: #529a2f;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.heart-button-no {
+    background-color: #d6d2d3;
+    color: #fff;
+}
+
+.heart-button-active {
+    background-color: #eff3ee;
+    color: #91c33c;
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

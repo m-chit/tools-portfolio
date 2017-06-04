@@ -36,6 +36,7 @@
 }
 
 .log-button {
+    cursor: pointer;
     color: white;
     text-shadow: 0 0 3px #529a2f;
     font-weight: 700;

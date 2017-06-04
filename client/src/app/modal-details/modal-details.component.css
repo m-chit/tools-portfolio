@@ -57,12 +57,27 @@
 }
 
 .heart-button {
-    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
-    background-color: transparent;
     border: none;
-    color: #529a2f;
-    font-size: 1.3rem;
+    outline: none;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.heart-button-no {
+    background-color: #d6d2d3;
+    color: #fff;
+}
+
+.heart-button-active {
+    background-color: #eff3ee;
+    color: #91c33c;
 }
 
 div > button {
@@ -114,4 +129,12 @@ div > button {
     font-size: 1.5rem;
     font-family: Consolas, monaco, monospace;
     font-weight: 600;
+}
+
+.link {
+    color: #4b8d2b;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
 }

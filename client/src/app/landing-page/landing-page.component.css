@@ -64,6 +64,7 @@
 }
 
 .buttons-design {
+    cursor: pointer;
     background-color: rgba(0, 0, 0, .5);
     color: #4b8d2b;
     font-family: Consolas, monaco, monospace;
@@ -77,6 +78,6 @@
 .buttons-design:hover, .buttons-design:focus, .buttons-design:active {
     outline: none;
     box-shadow: none;
-    background-color: #4b8d2b;
+    background-color: rgba(75, 141, 43, .5);
     color: white;
 }

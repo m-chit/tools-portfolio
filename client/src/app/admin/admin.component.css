@@ -9,6 +9,10 @@
     min-width: 900px;
 }
 
+.pointer-button {
+    cursor: pointer;
+}
+
 .tool-add {
     height: calc(100vh - 100px);
     overflow: auto;

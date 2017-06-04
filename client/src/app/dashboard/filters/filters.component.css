@@ -1,6 +1,6 @@
 .filter {
     padding: 10px 0 0 0;
-    margin: 9vh 0 0 50px;
+    margin: 90px 0 0 50px;
     border-right: dashed 1px #d6e7b8;
     display: flex;
     height: 89vh;
@@ -10,6 +10,7 @@
 }
 
 .filter-title {
+    margin-top: 20px;
     color: #393b38;
     font-size: 2rem;
     font-family: Consolas, monaco, monospace;
@@ -51,6 +52,7 @@
 }
 
 .search {
+    margin-bottom: 20px;
     border: solid 1px #eee;
     padding: 10px;
     border-radius: 5px;

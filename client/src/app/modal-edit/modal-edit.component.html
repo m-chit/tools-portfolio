@@ -32,6 +32,12 @@
                     [(ngModel)]="toolToEdit.image"
                     type="text"
                     class="log-input">
+            <input
+                    placeholder="Link"
+                    name="link"
+                    [(ngModel)]="toolToEdit.link"
+                    type="text"
+                    class="log-input">
             <select
                     name="category"
                     [(ngModel)]="toolToEdit.category"
@@ -56,7 +62,7 @@
                         ngModel
                         type="text"
                         class="log-input">
-                <button type="button" class="btn btn-success tag-button" (click)="addTags()">Add new tag</button>
+                <button type="button" class="btn btn-success tag-button pointer-button" (click)="addTags()">Add new tag</button>
             </div>
             <div class="tags-text">
         <span *ngFor="let tag of toolToEdit.tags" class="tags-text">
@@ -66,7 +72,7 @@
             {{ tag }}
         </span>
             </div>
-            <button type="button" (click)="onSubmit()" class="btn btn-success">Add tool!</button>
+            <button type="button" (click)="onSubmit()" class="btn btn-success pointer-button">Save tool!</button>
         </form>
     </div>
 
