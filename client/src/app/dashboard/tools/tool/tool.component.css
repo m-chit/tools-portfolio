@@ -80,12 +80,12 @@
 }
 
 .heart-button-no {
-    background-color: #d6d2d3;
-    color: #fff;
+    background-color: transparent;
+    color: #91c33c;
 }
 
 .heart-button-active {
-    background-color: #eff3ee;
+    background-color: transparent;
     color: #91c33c;
 }
 
