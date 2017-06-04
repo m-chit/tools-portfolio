@@ -10,6 +10,7 @@ import {Http} from '@angular/http';
 export class NavbarComponent implements OnInit {
     dropdownShow = false;
     isAdmin = false;
+    username: string;
 
     constructor(private authService: AuthService, private http: Http) {
     }
@@ -17,7 +18,10 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         const token = this.authService.isAuthorised() ? '?token=' + localStorage.getItem('token') : '';
         this.http.get('/api/users' + token).subscribe(
-            response => this.isAdmin = response.json().admin
+            response => {
+                this.isAdmin = response.json().admin;
+                this.username = response.json().username;
+            }
         );
     }
 
