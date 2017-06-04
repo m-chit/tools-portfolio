@@ -59,11 +59,14 @@ export class ToolsService {
     }
 
 
-    filterTools(tools: ToolModel[], filterObject: { filterFav: boolean, filters: FilterModel[] }) {
+    filterTools(tools: ToolModel[], filterObject: { filterFav: boolean, searchText: string, filters: FilterModel[] }) {
         const clearedFilters = filterObject.filters.filter(filter => filter !== undefined && filter.category !== '');
         let toolsToDisplay = tools;
         if (filterObject.filterFav) {
             toolsToDisplay = toolsToDisplay.filter(tool => tool.favorite);
+        }
+        if (filterObject.searchText.length !== 0) {
+            toolsToDisplay = toolsToDisplay.filter(tool => tool.name.toUpperCase().includes(filterObject.searchText.toUpperCase()));
         }
         if (clearedFilters.length !== 0) {
             toolsToDisplay = toolsToDisplay.filter(tool => {
