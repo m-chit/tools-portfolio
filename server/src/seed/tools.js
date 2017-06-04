@@ -146,7 +146,7 @@ module.exports = () => {
         'registered users and more than 2,000 courses.',
         image: '../../assets/logo/logo-13.png',
         link: 'https://www.coursera.org/',
-        favorite: false,
+        favorite: true,
         category: 'Education',
         tags: ['Online courses']
       },
@@ -161,7 +161,7 @@ module.exports = () => {
         'The creator of Jenkins is Kohsuke Kawaguchi. Released under the MIT License, Jenkins is free software.',
         image: '../../assets/logo/logo-12.png',
         link: 'https://jenkins.io/',
-        favorite: false,
+        favorite: true,
         category: 'Programming',
         tags: ['CI']
       },

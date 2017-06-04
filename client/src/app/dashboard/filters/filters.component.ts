@@ -11,6 +11,7 @@ export class FiltersComponent {
     @Output() filterObjectEmitter = new EventEmitter<{ filterFav: boolean, searchText: string, filters: FilterModel[] }>();
     filterObject: { filterFav: boolean, searchText: string, filters: FilterModel[] };
     searchText: string;
+
     constructor() {
         this.filterObject = {filterFav: false, searchText: '', filters: []};
     }
