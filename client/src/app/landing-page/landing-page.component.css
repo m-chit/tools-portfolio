@@ -79,7 +79,7 @@
 .buttons-design {
     cursor: pointer;
     background-color: rgba(0, 0, 0, .5);
-    color: #4b8d2b;
+    color: #91c33c;
     font-family: Consolas, monaco, monospace;
     font-size: 1rem;
     outline: none;
@@ -91,6 +91,6 @@
 .buttons-design:hover, .buttons-design:focus, .buttons-design:active {
     outline: none;
     box-shadow: none;
-    background-color: rgba(75, 141, 43, .5);
+    background-color:rgba(0, 0, 0, 1);
     color: white;
 }

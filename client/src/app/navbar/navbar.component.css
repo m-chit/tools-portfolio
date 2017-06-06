@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-    background-color: #4a8a2a;
+    background-color: #3f3735;
     width: 100vw;
     padding: 0 20px 0 20px;
     border: none;
@@ -48,6 +48,7 @@
     background-color: #91c33c;
     color: #eef3ef;
     cursor: pointer;
+    box-shadow: inset 0 -2px 0 #3f3735;
 }
 
 .dropdown {
@@ -60,6 +61,7 @@
 }
 
 .my-dropdown {
+
     cursor: pointer;
     color: #eef3ef;
     background-color: transparent;

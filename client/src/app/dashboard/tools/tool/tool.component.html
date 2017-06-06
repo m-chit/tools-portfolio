@@ -15,12 +15,12 @@
 
     <div class="buttons">
         <button *ngIf="!tool.favorite"
-                class="heart-button heart-button-no"
+                class="heart-button"
                 (click)="tool.favorite = !tool.favorite">
             <i class="fa fa-heart-o " aria-hidden="true"></i>
         </button>
         <button *ngIf="tool.favorite"
-                class="heart-button heart-button-active"
+                class="heart-button"
                 (click)="tool.favorite = !tool.favorite">
             <i class="fa fa-heart " aria-hidden="true"></i>
         </button>

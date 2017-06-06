@@ -2,20 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 18px;
-    width: 18px;
+    height: 21px;
+    width: 21px;
     margin-right: 8px;
-    border-radius: 3px;
+    border-radius: 50%;
     background-color: transparent;
-    border: solid 1px #000;
     cursor: pointer;
     outline: none;
+    color: #393b38;
+    font-size: 1.3rem;
 }
 
 .active {
-    color: #ffffff;
-    background-color: #529a2f;
-    border: solid 1px #4b8d2b;
+    color: white;
 }
-
-

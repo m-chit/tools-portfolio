@@ -18,3 +18,16 @@
     background: #d6e7b8;
 }
 
+.my-button-green {
+    background-color: #91c33c;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-family: Consolas, monaco, monospace;
+}
+
+.my-button-green:hover {
+    background-color: #83b036;
+    border-radius: 3px;
+}

@@ -24,7 +24,7 @@
 
 .icon-left {
     display: flex;
-    background-color: #529a2f;
+    background-color: #91c33c;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -35,21 +35,8 @@
     width: 36px;
 }
 
-.log-button {
-    cursor: pointer;
-    color: white;
-    text-shadow: 0 0 3px #529a2f;
-    font-weight: 700;
-    font-family: Consolas, monaco, monospace;
-    font-size: 1rem;
-    padding: 10px 30px 10px 30px;
-    border: solid 1px #4a8a2a;
-    background-color: #529a2f;
+.my-button-green {
     margin-top: 20px;
-}
-
-.log-button:hover {
-    background-color: #4a8a2a;
 }
 
 @media (max-width: 60rem) {
