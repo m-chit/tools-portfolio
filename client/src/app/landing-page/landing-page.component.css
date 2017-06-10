@@ -1,6 +1,5 @@
 .background {
-    animation: background-animation 32s steps(1, end) infinite;
-    background: #ffffff url(../../assets/img/bg-c.png) no-repeat bottom center fixed;
+    background: #ffffff url(../../assets/img/wow.png) no-repeat bottom center fixed;
     background-size: cover;
     display: flex;
     height: 100vh;
@@ -10,54 +9,22 @@
     justify-content: center;
 }
 
-@keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .title-log {
     color: white;
     font-size: 6em;
     display: flex;
     justify-content: center;
     font-family: "Dancing Script";
-    text-shadow: 0 0 .4rem #000, 0 0 4rem #000;
+    text-shadow: 0 0 .4rem #000, 0 0 20px #000, 0 0 50px #000;
     padding-bottom: 20px;
 }
 
 .panel {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.65);
     box-shadow: 0 0 2rem #000;
     border: solid 1px #000000;
     width: 40vw;
     padding: 0 20px 20px 20px;
-}
-
-@keyframes background-animation {
-    0%, 100% {
-        opacity: 1;
-        background: url(../../assets/img/bg-c.png) no-repeat bottom center fixed;
-        background-size: cover;
-    }
-    25% {
-        opacity: 1;
-        background: url(../../assets/img/bg-k.png) no-repeat bottom center fixed;
-        background-size: cover;
-    }
-    50% {
-        opacity: 1;
-        background: url(../../assets/img/bg-g.png) no-repeat bottom center fixed;
-        background-size: cover;
-    }
-    75% {
-        opacity: 1;
-        background: url(../../assets/img/bg-j.png) no-repeat bottom center fixed;
-        background-size: cover;
-    }
 }
 
 @media (max-width: 60rem) {
@@ -91,6 +58,6 @@
 .buttons-design:hover, .buttons-design:focus, .buttons-design:active {
     outline: none;
     box-shadow: none;
-    background-color:rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1);
     color: white;
 }

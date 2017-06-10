@@ -1,30 +1,32 @@
 <div class="tool-shell">
-    <div class="tool text-center">
+    <div class="start" (mouseover)="mouse()" [ngClass]="{back: mouse1}">
+        <div class="tool text-center">
 
-        <img class="tool-image" [src]="tool.image" alt=" ">
+            <img class="tool-image" [src]="tool.image" alt=" ">
 
-        <span class="tool-title-font"> {{tool.name | cut:25}} </span>
+            <span class="tool-title-font"> {{tool.name | cut:25}} </span>
 
-        <div class="tags">
-            <span class="tool-tag-font"> {{tool.tags}}</span>
+            <div class="tags">
+                <span class="tool-tag-font"> {{tool.tags}}</span>
+            </div>
+
+
+            <span class="tool-details-font"> {{tool.details | cut:145}} </span>
         </div>
 
+        <div class="buttons">
+            <button *ngIf="!tool.favorite"
+                    class="heart-button"
+                    (click)="tool.favorite = !tool.favorite">
+                <i class="fa fa-heart-o " aria-hidden="true"></i>
+            </button>
+            <button *ngIf="tool.favorite"
+                    class="heart-button"
+                    (click)="tool.favorite = !tool.favorite">
+                <i class="fa fa-heart " aria-hidden="true"></i>
+            </button>
 
-        <span class="tool-details-font"> {{tool.details | cut:145}} </span>
-    </div>
-
-    <div class="buttons">
-        <button *ngIf="!tool.favorite"
-                class="heart-button"
-                (click)="tool.favorite = !tool.favorite">
-            <i class="fa fa-heart-o " aria-hidden="true"></i>
-        </button>
-        <button *ngIf="tool.favorite"
-                class="heart-button"
-                (click)="tool.favorite = !tool.favorite">
-            <i class="fa fa-heart " aria-hidden="true"></i>
-        </button>
-
-        <app-modal-details [Tool]="tool"></app-modal-details>
-    </div>
+            <app-modal-details [Tool]="tool"></app-modal-details>
+        </div>
+</div>
 </div>

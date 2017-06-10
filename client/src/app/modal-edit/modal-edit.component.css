@@ -68,13 +68,18 @@ div > button {
     border-radius: 50%;
     color: white;
     padding: 0;
-    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
     border: none;
     box-shadow: none;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .edit-button:hover {

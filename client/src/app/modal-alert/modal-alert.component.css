@@ -1,23 +1,24 @@
 .modal-shell {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, .7);
+    bottom: 0;
+    left: 50vw;
+    background-color: #3f3735;
     height: 100px;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 3px 3px 0 0;
     color: white;
+    border: 0;
     padding: 10px;
-    animation: modal 1s ease-out;
+    animation: modal .5s ease-out;
     z-index: 3;
 }
 
 @keyframes modal {
     0% {
-        right: -300px
+        bottom: -100px
     }
     100% {
-        right: 10px;
+        bottom: 0px;
     }
 }
 
@@ -31,17 +32,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    width: 18px;
-    height: 18px;
     border: none;
+    color: white;
+    width: 20px;
+    height: 20px;
     background-color: transparent;
     outline: none;
 }
 
 .button-x:hover {
-    color: tomato;
+    background-color: #c33c3c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: none;
+    border-radius: 50%;
 }
 
 .text-area {

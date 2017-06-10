@@ -1,35 +1,34 @@
 .tool-shell {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+    min-height: 400px;
+    max-height: 400px;
     height: 400px;
-    width: 365px;
+    max-width: 365px;
+    min-width: 365px;
     margin: 20px 10px 50px 10px;
     border: solid .1rem #f4f4f4;
     box-shadow: 4px 4px 6px rgba(200, 200, 200, .1);
-    transition-duration: .5s;
-    transition-delay: 0s;
-}
-
-.tool-shell:hover {
-    background-color: rgba(200, 200, 200, .3);
-}
-
-.tool {
-    padding: 0 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: #4b4b4b;
 }
 
+.tool {
+    min-height: 320px;
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .buttons {
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .tool-image {
+    background-color: white;
     margin-top: 20px;
     width: 85px;
     height: 85px;
@@ -40,7 +39,6 @@
     margin-top: 10px;
     font-weight: 600;
     font-family: Consolas, monaco, monospace;
-    color: #333333;
     font-size: 1.2rem;
 }
 
@@ -58,7 +56,6 @@
     padding-top: 20px;
     border-top: solid 1px #eee;
     text-align: justify;
-    color: #585858;
     font-size: .9rem;
 }
 
@@ -78,7 +75,6 @@
     color: white;
 }
 
-
 .heart-button:hover {
     background-color: #ba5b45;
 }
@@ -92,4 +88,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.back:hover {
+    animation: backgroundAnim-down 1s ease-out 0s 1 alternate forwards;
+}
+
+.back:not(:hover) {
+    animation: backgroundAnim-up 1s ease-out 0s 1 alternate forwards;
+}
+
+@keyframes backgroundAnim-up {
+    0% {
+        height: 400px;
+        color: white;
+        background-color: #393b38;
+    }
+    100% {
+        height: 0;
+        color: inherit;
+        background-color: #393b38;
+    }
+}
+
+@keyframes backgroundAnim-down {
+    0% {
+        height: 0;
+        color: inherit;
+        background-color: #393b38;
+    }
+    100% {
+        height: 400px;
+        color: white;
+        background-color: #393b38;
+    }
+}
+
+.start {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

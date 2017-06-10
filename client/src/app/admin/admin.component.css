@@ -97,14 +97,26 @@
     flex-basis: 25%;
 }
 
+.tags-name {
+    padding-left: 10px;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 .tag-remove-button {
+    margin: 0;
+    padding: 0;
     background-color: #c33c3c;
     cursor: pointer;
     height: 30px;
     width: 30px;
     border-radius: 50%;
     color: white;
-    padding: 0;
     display: flex;
     justify-content: center;
     font-size: 18px;
@@ -135,6 +147,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.right-buttons:last-child {
+    padding-right: 30px;
 }
 
 .big-title {

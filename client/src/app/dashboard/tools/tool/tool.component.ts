@@ -8,4 +8,9 @@ import {ToolModel} from '../../../models/tool.model';
 })
 export class ToolComponent {
     @Input('Tool') tool: ToolModel;
+    mouse1 = false;
+
+    mouse() {
+        this.mouse1 = true;
+    }
 }

@@ -27,6 +27,7 @@ import {SignInComponent} from './landing-page/sign-in/sign-in.component';
 import {AuthService} from './services/auth.service';
 import {AuthGuardianService} from './services/auth.guardian.service';
 import {AdminGuardianService} from './services/admin.guardian.service';
+import {ImageUploadModule} from 'angular2-image-upload';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {AdminGuardianService} from './services/admin.guardian.service';
         BrowserModule,
         FormsModule,
         HttpModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ImageUploadModule.forRoot()
     ],
     providers: [ToolsService, AlertService, AuthService, AuthGuardianService, AdminGuardianService],
     bootstrap: [AppComponent]
