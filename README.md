@@ -1,6 +1,8 @@
 # innovativeproject-toolsportfolio
 Web application Tools Portfolio: web application which allows easy access to tools used at work and provides ways to manage them.
 
+To see admin panel (you may there add/delete tool), use username: admin, password: admin.
+
 Prerequisites:
 
 * [Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
